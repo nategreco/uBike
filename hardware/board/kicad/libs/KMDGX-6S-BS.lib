@@ -1,0 +1,30 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model KMDGX-6S-BS
+#/1293668/966828/2.49/9/4/Connector
+DEF KMDGX-6S-BS J 0 30 Y Y 1 F N
+F0 "J" 750 300 50 H V L CNN
+F1 "KMDGX-6S-BS" 750 200 50 H V L CNN
+F2 "KMDGX6SBS" 750 100 50 H I L CNN
+F3 "https://datasheet.datasheetarchive.com/originals/distributors/Datasheets_SAMA/6ef7dd0114fbe54ec5765e7dadc75a47.pdf" 750 0 50 H I L CNN
+F4 "Circular DIN Connectors 6P R/A FULL SHIELD GOLD PLANTED" 750 -100 50 H I L CNN "Description"
+F5 "13" 750 -200 50 H I L CNN "Height"
+F6 "806-KMDGX-6S-BS" 750 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Kycon/KMDGX-6S-BS?qs=gomZSfZNELc%252BcxHiGAVThw%3D%3D" 750 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Kycon" 750 -500 50 H I L CNN "Manufacturer_Name"
+F9 "KMDGX-6S-BS" 750 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X 1 1 0 0 200 R 50 50 0 0 P
+X 2 2 0 -100 200 R 50 50 0 0 P
+X 3 3 0 -200 200 R 50 50 0 0 P
+X 5 5 0 -300 200 R 50 50 0 0 P
+X 6 6 0 -400 200 R 50 50 0 0 P
+X 8 8 900 0 200 L 50 50 0 0 P
+X MH1 MH1 900 -100 200 L 50 50 0 0 P
+X MH2 MH2 900 -200 200 L 50 50 0 0 P
+X MH3 MH3 900 -300 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 700 100 700 -500 200 -500 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name "F31S-1A7L1-11040")(type "Legacy")(uri "${KIPRJMOD}/libs/F31S-1A7L1-11040.lib")(options "")(descr ""))
+  (lib (name "FTSH-105-01-F-DV-K")(type "Legacy")(uri "${KIPRJMOD}/libs/FTSH-105-01-F-DV-K.lib")(options "")(descr ""))
+  (lib (name "KMDGX-6S-BS")(type "Legacy")(uri "${KIPRJMOD}/libs/KMDGX-6S-BS.lib")(options "")(descr ""))
+  (lib (name "KMDGX-8S-BS")(type "Legacy")(uri "${KIPRJMOD}/libs/KMDGX-8S-BS.lib")(options "")(descr ""))
+  (lib (name "SN65HVD08DR")(type "Legacy")(uri "${KIPRJMOD}/libs/SN65HVD08DR.lib")(options "")(descr ""))
+)
