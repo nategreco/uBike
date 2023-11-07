@@ -26,11 +26,12 @@
 #include <zephyr/bluetooth/gatt.h>
 #include <zephyr/bluetooth/uuid.h>
 #include <zephyr/init.h>
+#include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
 #include <zephyr/types.h>
-#include <zephyr/kernel.h>
 
 LOG_MODULE_REGISTER ( cps );
+static bool notify_enabled = false;
 
 // Read feature callback
 static ble_cps_features_t cps_features = {};
@@ -54,9 +55,9 @@ static void cps_ccc_cfg_changed ( const struct bt_gatt_attr *attr,
 {
     ARG_UNUSED ( attr );
 
-    bool notif_enabled = ( value == BT_GATT_CCC_NOTIFY );
+    notify_enabled = ( value == BT_GATT_CCC_NOTIFY );
 
-    LOG_INF ( "CPS notifications %s", notif_enabled ? "enabled" : "disabled" );
+    LOG_INF ( "CPS notifications %s", notify_enabled ? "enabled" : "disabled" );
 }
 
 BT_GATT_SERVICE_DEFINE (
@@ -74,7 +75,7 @@ BT_GATT_SERVICE_DEFINE (
                              NULL,
                              NULL,
                              NULL ),
-    BT_GATT_CCC ( NULL,
+    BT_GATT_CCC ( cps_ccc_cfg_changed,
                   ( BT_GATT_PERM_READ | BT_GATT_PERM_WRITE ) ) );
 
 static int cps_init ( const struct device *dev )
@@ -88,6 +89,10 @@ static int cps_init ( const struct device *dev )
 
 int bt_cps_notify ( bike_data_t bikeData )
 {
+    if ( !notify_enabled ) {
+        return -EACCES;
+    }
+
     static ble_cps_measurement_data_t data = {};
     data.InstantaneousPower = bikeData.watts;
 

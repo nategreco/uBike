@@ -560,6 +560,7 @@ void main ( void )
         bt_cps_notify ( bikeData );
         bt_ftms_bike_notify ( bikeData );
         // bt_fec_update ( bikeData );
+        bt_ftms_status_notify();
 
         // Update display
         updateDisplay ( bikeData );

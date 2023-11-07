@@ -26,12 +26,17 @@
 #include <zephyr/bluetooth/gatt.h>
 #include <zephyr/bluetooth/uuid.h>
 #include <zephyr/init.h>
+#include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
 #include <zephyr/types.h>
-#include <zephyr/kernel.h>
+
+#define SEM_TIMEOUT K_MSEC ( 500 )
 
 LOG_MODULE_REGISTER ( ftms );
 static set_targets_callback_t setTargetsCbFunc = NULL;
+static bool ftms_bike_notify = false;
+static bool ftms_status_notify = false;
+K_SEM_DEFINE ( ftms_sem, 0, 1 );
 
 void ftmsSetTargetsCb ( set_targets_callback_t func )
 {
@@ -56,20 +61,31 @@ static inline int bt_gatt_indicate_uuid ( struct bt_conn *conn,
 }
 
 // Config change callback
-static void ftms_notify_ccc_cfg_changed ( const struct bt_gatt_attr *attr,
-                                          uint16_t value )
+static void ftms_bike_data_ccc_changed ( const struct bt_gatt_attr *attr,
+                                         uint16_t value )
 {
-    bool notif_enabled = ( value == BT_GATT_CCC_NOTIFY );
+    ftms_bike_notify = ( value == BT_GATT_CCC_NOTIFY );
 
-    LOG_INF ( "FTMS notifications %s", notif_enabled ? "enabled" : "disabled" );
+    LOG_INF ( "FTMS bike data notifications %s",
+              ftms_bike_notify ? "enabled" : "disabled" );
 }
 
-static void ftms_indicate_ccc_cfg_changed ( const struct bt_gatt_attr *attr,
-                                            uint16_t value )
+static void ftms_status_ccc_changed ( const struct bt_gatt_attr *attr,
+                                      uint16_t value )
+{
+    ftms_status_notify = ( value == BT_GATT_CCC_NOTIFY );
+
+    LOG_INF ( "FTMS status notifications %s",
+              ftms_status_notify ? "enabled" : "disabled" );
+}
+
+static void ftms_control_ccc_changed ( const struct bt_gatt_attr *attr,
+                                       uint16_t value )
 {
     bool indic_enabled = ( value == BT_GATT_CCC_INDICATE );
 
-    LOG_INF ( "FTMS indications %s", indic_enabled ? "enabled" : "disabled" );
+    LOG_INF ( "FTMS control point indications %s",
+              indic_enabled ? "enabled" : "disabled" );
 }
 
 static ble_ftms_features_t ftms_features;
@@ -133,8 +149,14 @@ static ssize_t write_control ( struct bt_conn *conn,
                                uint16_t offset,
                                uint8_t flags )
 {
+    // Lock semaphore to prevent notifications before response
+    if ( k_sem_take ( &ftms_sem, SEM_TIMEOUT ) ) {
+        LOG_WRN ( "Failed to get FTMS semaphore!  Continuing anyways..." );
+    }
+
     const ctrl_point_req_t *req = buf;
     if ( offset ) {
+        k_sem_give ( &ftms_sem );
         return BT_GATT_ERR ( BT_ATT_ERR_INVALID_OFFSET );
     }
     const uint16_t data_len = len - sizeof ( ctrl_point_req_t );
@@ -173,6 +195,9 @@ static ssize_t write_control ( struct bt_conn *conn,
             control_response ( conn, attr, req->req_op, &req->param, data_len );
     }
 
+    // Give up semaphore
+    k_sem_give ( &ftms_sem );
+
     return len;
 }
 
@@ -192,7 +217,7 @@ BT_GATT_SERVICE_DEFINE (
                              NULL,
                              NULL,
                              NULL ),
-    BT_GATT_CCC ( ftms_notify_ccc_cfg_changed,
+    BT_GATT_CCC ( ftms_bike_data_ccc_changed,
                   ( BT_GATT_PERM_READ | BT_GATT_PERM_WRITE ) ),
     BT_GATT_CHARACTERISTIC ( BLUE_UUID_SUPPORTED_INCLINATION_RANGE_CHAR,
                              BT_GATT_CHRC_READ,
@@ -212,7 +237,7 @@ BT_GATT_SERVICE_DEFINE (
                              NULL,
                              write_control,
                              NULL ),
-    BT_GATT_CCC ( NULL,
+    BT_GATT_CCC ( ftms_control_ccc_changed,
                   ( BT_GATT_PERM_READ | BT_GATT_PERM_WRITE ) ),
     BT_GATT_CHARACTERISTIC ( BLE_UUID_FTMS_STATUS_CHAR,
                              BT_GATT_CHRC_NOTIFY,
@@ -220,7 +245,7 @@ BT_GATT_SERVICE_DEFINE (
                              NULL,
                              NULL,
                              NULL ),
-    BT_GATT_CCC ( NULL,
+    BT_GATT_CCC ( ftms_status_ccc_changed,
                   ( BT_GATT_PERM_READ | BT_GATT_PERM_WRITE ) ), );
 
 static void control_response ( struct bt_conn *conn,
@@ -239,7 +264,7 @@ static void control_response ( struct bt_conn *conn,
     if ( data && data_len ) {
         memcpy ( &resp->param, data, data_len );
     }
-
+    // Or notify?
     bt_gatt_indicate_uuid ( conn,
                             BLUE_UUID_FITNESS_CONTROL_POINT_CHAR,
                             attr,
@@ -275,6 +300,15 @@ static int ftms_init ( const struct device *dev )
 
 int bt_ftms_bike_notify ( bike_data_t bikeData )
 {
+    if ( !ftms_bike_notify ) {
+        return -EACCES;
+    }
+
+    // Lock semaphore
+    if ( k_sem_take ( &ftms_sem, SEM_TIMEOUT ) ) {
+        LOG_WRN ( "Failed to get FTMS semaphore!  Continuing anyways..." );
+    }
+
     static ble_ftms_indoor_bike_data_t data = {};
     data.flags = BLE_FTMS_INDOOR_FLAGS_FIELD_INSTANTANEOUS_CADENCE_PRESENT
                  | BLE_FTMS_INDOOR_FLAGS_FIELD_INSTANTANEOUS_POWER_PRESENT;
@@ -287,11 +321,24 @@ int bt_ftms_bike_notify ( bike_data_t bikeData )
                                ftms_svc.attrs,
                                &data,
                                sizeof ( data ) );
+
+    // Give up semaphore
+    k_sem_give ( &ftms_sem );
+
     return rc == -ENOTCONN ? 0 : rc;
 }
 
 int bt_ftms_status_notify()
 {
+    if ( !ftms_status_notify ) {
+        return -EACCES;
+    }
+
+    // Lock semaphore
+    if ( k_sem_take ( &ftms_sem, SEM_TIMEOUT ) ) {
+        LOG_WRN ( "Failed to get FTMS semaphore!  Continuing anyways..." );
+    }
+
     int rc;
     ftms_status_t status = {};
     status.op = OPCODE_STARTED;
@@ -301,6 +348,9 @@ int bt_ftms_status_notify()
                                ftms_svc.attrs,
                                &status,
                                sizeof ( status ) );  // TODO - Size is wrong!
+
+    // Give up semaphore
+    k_sem_give ( &ftms_sem );
 
     return rc == -ENOTCONN ? 0 : rc;
 }

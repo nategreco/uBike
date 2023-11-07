@@ -26,11 +26,12 @@
 #include <zephyr/bluetooth/gatt.h>
 #include <zephyr/bluetooth/uuid.h>
 #include <zephyr/init.h>
+#include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
 #include <zephyr/types.h>
-#include <zephyr/kernel.h>
 
 LOG_MODULE_REGISTER ( cscs );
+static bool notify_enabled = false;
 
 // Read feature callback
 static ble_cscs_features_t cscs_features = {};
@@ -54,9 +55,10 @@ static void cscs_ccc_cfg_changed ( const struct bt_gatt_attr *attr,
 {
     ARG_UNUSED ( attr );
 
-    bool notif_enabled = ( value == BT_GATT_CCC_NOTIFY );
+    notify_enabled = ( value == BT_GATT_CCC_NOTIFY );
 
-    LOG_INF ( "CSCS notifications %s", notif_enabled ? "enabled" : "disabled" );
+    LOG_INF ( "CSCS notifications %s",
+              notify_enabled ? "enabled" : "disabled" );
 }
 
 BT_GATT_SERVICE_DEFINE (
@@ -74,7 +76,7 @@ BT_GATT_SERVICE_DEFINE (
                              NULL,
                              NULL,
                              NULL ),
-    BT_GATT_CCC ( NULL,
+    BT_GATT_CCC ( cscs_ccc_cfg_changed,
                   ( BT_GATT_PERM_READ | BT_GATT_PERM_WRITE ) ) );
 
 static int cscs_init ( const struct device *dev )
@@ -112,6 +114,10 @@ static void set_crank_data ( uint16_t rpm, ble_cscs_measurement_data_t *data )
 
 int bt_cscs_bike_notify ( bike_data_t bikeData )
 {
+    if ( !notify_enabled ) {
+        return -EACCES;
+    }
+
     static ble_cscs_measurement_data_t data = {};
     set_crank_data ( bikeData.act_rpm, &data );
 
