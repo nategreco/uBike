@@ -27,6 +27,7 @@
 
 #include "common.h"
 
+#define TOUCH_CONTROLLER_NODE DT_ALIAS ( kscan0 )
 #define BL_PWM_NODE DT_ALIAS ( blpwm )
 #define PWM_PERIOD PWM_MSEC ( 1U )  // 1 kHz
 #define DIM_MS 10000U               // 10s
@@ -42,6 +43,7 @@ K_SEM_DEFINE ( data_sem, 1, 1 );  // Default to taken
 static const struct device *display_dev
     = DEVICE_DT_GET ( DT_CHOSEN ( zephyr_display ) );
 static const struct pwm_dt_spec blPwm = PWM_DT_SPEC_GET ( BL_PWM_NODE );
+static const struct device *kscan_dev = DEVICE_DT_GET ( TOUCH_CONTROLLER_NODE );
 static bike_data_t bikeData = {};
 
 static lv_obj_t *rpm_label;
@@ -217,7 +219,7 @@ static void buttonCb ( lv_event_t *e )
 static void drawButton()
 {
     btn = lv_btn_create ( lv_scr_act() );
-    lv_obj_add_event_cb ( btn, buttonCb, LV_EVENT_PRESSED, NULL );
+    //lv_obj_add_event_cb ( btn, buttonCb, LV_EVENT_PRESSED, NULL );
     lv_obj_align ( btn, LV_ALIGN_TOP_MID, 0, 410 );
     lv_obj_set_height ( btn, 60 );
     lv_obj_set_width ( btn, 300 );
@@ -330,8 +332,15 @@ int initDisplay()
         LOG_ERR ( "Failed to set backlight period!" );
         return -3;
     };
+    if ( !device_is_ready ( kscan_dev ) ) {
+        LOG_ERR ( "kscan device %s not ready", kscan_dev->name );
+        return -4;
+    }
 
     updateBacklight ( true );
+    
+    kscan_config ( kscan_dev, k_callback );
+    kscan_enable_callback ( kscan_dev );
 
     drawLines();
     drawLabels();
@@ -344,7 +353,7 @@ int initDisplay()
     updateLabels ( bikeData );
 
     lv_obj_clear_flag ( lv_scr_act(), LV_OBJ_FLAG_SCROLLABLE );
-    lv_obj_add_event_cb ( lv_scr_act(), screenCb, LV_EVENT_PRESSED, NULL );
+    //lv_obj_add_event_cb ( lv_scr_act(), screenCb, LV_EVENT_PRESSED, NULL );
 
     lv_task_handler();
     display_blanking_off ( display_dev );
