@@ -104,6 +104,17 @@
 	};
 };
 
+&flash0 {
+	partitions {
+        compatible = "fixed-partitions";
+        boot_partition: partition@0 {
+            label = "mcuboot";
+            reg = <0x000000000 0x000 0xC000>;
+			//reg = <0x000000000 0x00010000>;
+        };
+    };
+};
+
 &gpio0 {
 	status = "okay";
 };

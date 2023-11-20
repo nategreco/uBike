@@ -28,6 +28,7 @@
 #include <zephyr/drivers/uart.h>
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
+#include <zephyr/mgmt/mcumgr/transport/smp_bt.h>
 #include <zephyr/random/rand32.h>
 #include <zephyr/types.h>
 
@@ -79,8 +80,25 @@ static const struct bt_data ad []
                         BT_UUID_16_ENCODE ( BT_UUID_FTMS_VAL ) ),
         BT_DATA ( BT_DATA_NAME_COMPLETE, DEVICE_NAME, DEVICE_NAME_LEN ) };
 
-static const struct bt_data sd []
-    = { /*BT_DATA_BYTES ( BT_DATA_UUID128_ALL, BT_UUID_FEC_VAL )*/ };
+static const struct bt_data sd [] = {
+    BT_DATA_BYTES ( BT_DATA_UUID128_ALL,
+                    0x84,
+                    0xaa,
+                    0x60,
+                    0x74,
+                    0x52,
+                    0x8a,
+                    0x8b,
+                    0x86,
+                    0xd3,
+                    0x4c,
+                    0xb7,
+                    0x1d,
+                    0x1d,
+                    0xdc,
+                    0x53,
+                    0x8d ),
+};
 
 static void adv_start ( void )
 {
@@ -507,6 +525,7 @@ void main ( void )
     }
 
     LOG_INF ( "Initializing bluetooth..." );
+    smp_bt_register();
     ret = bt_enable ( NULL );
     if ( ret ) {
         LOG_ERR ( "Bluetooth init failed (err %d)", ret );
