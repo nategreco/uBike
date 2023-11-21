@@ -26,6 +26,7 @@
 #include <zephyr/logging/log.h>
 
 #include "common.h"
+#include "version.h"
 
 #define BL_PWM_NODE DT_ALIAS ( blpwm )
 #define PWM_PERIOD PWM_MSEC ( 1U )  // 1 kHz
@@ -35,6 +36,8 @@
 
 #define STACKSIZE 2048
 #define PRIORITY 15
+
+#define SHA_CHAR_LEN 7
 
 LOG_MODULE_REGISTER ( display );
 
@@ -52,18 +55,21 @@ static lv_obj_t *rpm_desc_label;
 static lv_obj_t *pwr_desc_label;
 static lv_obj_t *inc_desc_label;
 static lv_obj_t *res_desc_label;
+static lv_obj_t *sha_label;
 static lv_obj_t *swLabel;
 static lv_obj_t *btnLabel;
 static lv_obj_t *btn;
 static lv_style_t style;
 static lv_style_t descStyle;
+static lv_style_t shaStyle;
 static lv_style_t btnStyle;
 static stopwatch_data_t swData;
-static char rpmString [4];  // 999
-static char pwrString [5];  // 9999
-static char incString [7];  // -10.0%
-static char resString [3];  // 99
-static char swString [9];   // 00:00:00
+static char rpmString [4];                 // 999
+static char pwrString [5];                 // 9999
+static char incString [7];                 // -10.0%
+static char resString [3];                 // 99
+static char swString [9];                  // 00:00:00
+static char shaString [SHA_CHAR_LEN + 1];  // 1234567
 
 void updateBacklight ( bool wakeUp )
 {
@@ -245,6 +251,12 @@ static void drawSlider()
     lv_obj_set_width ( slider, 300 );
 }*/
 
+void getShaChar ( char *buff, size_t len )
+{
+    strncpy ( buff, GIT_COMMIT_HASH, len );
+    buff [len + 1] = '\0';
+};
+
 static void drawLines()
 {
     static lv_point_t linePts1 [] = { { 0, 40 }, { 319, 40 } };
@@ -273,6 +285,7 @@ static void drawLabels()
     pwr_desc_label = lv_label_create ( lv_scr_act() );
     inc_desc_label = lv_label_create ( lv_scr_act() );
     res_desc_label = lv_label_create ( lv_scr_act() );
+    sha_label = lv_label_create ( lv_scr_act() );
 
     lv_style_init ( &descStyle );
     lv_style_set_text_font ( &descStyle, &lv_font_montserrat_24 );
@@ -285,10 +298,17 @@ static void drawLabels()
     lv_obj_align ( res_desc_label, LV_ALIGN_TOP_MID, 80, 260 );
     lv_obj_add_style ( res_desc_label, &descStyle, 0 );
 
+    lv_style_init ( &shaStyle );
+    lv_style_set_text_font ( &shaStyle, &lv_font_montserrat_18 );
+    lv_obj_align ( sha_label, LV_ALIGN_TOP_MID, 120, 0 );
+    lv_obj_add_style ( sha_label, &shaStyle, 0 );
+
     lv_label_set_text ( rpm_desc_label, "Rpm" );
     lv_label_set_text ( pwr_desc_label, "Watts" );
     lv_label_set_text ( inc_desc_label, "Incline" );
     lv_label_set_text ( res_desc_label, "Resistance" );
+    getShaChar ( shaString, SHA_CHAR_LEN );
+    lv_label_set_text ( sha_label, shaString );
 
     rpm_label = lv_label_create ( lv_scr_act() );
     pwr_label = lv_label_create ( lv_scr_act() );
@@ -374,7 +394,7 @@ static uint32_t reDrawDisplay()
 
 int updateDisplay ( bike_data_t data )
 {
-    //LOG_INF ("Updating display..." );
+    // LOG_INF ("Updating display..." );
     if ( k_sem_take ( &data_sem, SEM_TIMEOUT ) ) {
         LOG_WRN ( "updateDisplay() - Failed to get display data semaphore!" );
         return -1;
@@ -384,7 +404,7 @@ int updateDisplay ( bike_data_t data )
 
     k_sem_give ( &data_sem );
     reDrawDisplay();
-    //LOG_INF ("Display updated!" );
+    // LOG_INF ("Display updated!" );
     return 0;
 }
 

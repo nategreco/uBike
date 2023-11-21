@@ -36,9 +36,9 @@
 #include "cps.h"
 #include "cscs.h"
 #include "display.h"
-
 // #include "fec.h"
 #include "ftms.h"
+#include "version.h"
 
 LOG_MODULE_REGISTER ( app );
 
@@ -358,6 +358,7 @@ static void uart_cb ( const struct device *dev,
 void main ( void )
 {
     LOG_INF ( "Starting application, board: %s", CONFIG_BOARD );
+    LOG_INF ( "Software: %s:%s", GIT_BRANCH, GIT_COMMIT_HASH );
 
     LOG_INF ( "Registering callbacks..." );
     setSendMsgCb ( send_cmd );
