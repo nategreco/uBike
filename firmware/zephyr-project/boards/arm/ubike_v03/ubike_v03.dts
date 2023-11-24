@@ -106,12 +106,15 @@
 
 &flash0 {
 	partitions {
-        compatible = "fixed-partitions";
-        boot_partition: partition@0 {
-            label = "mcuboot";
-            reg = <0x000000000 0x000 0x8000>;
-        };
-    };
+		compatible = "fixed-partitions";
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		boot_partition: partition@0 {
+				label = "mcuboot";
+				reg = <0x000000000 0x00008000>;
+		};
+	};
 };
 
 &gpio0 {
