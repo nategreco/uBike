@@ -300,7 +300,7 @@ static void drawLabels()
 
     lv_style_init ( &shaStyle );
     lv_style_set_text_font ( &shaStyle, &lv_font_montserrat_24 );
-    lv_obj_align ( sha_label, LV_ALIGN_TOP_MID, 120, 0 );
+    lv_obj_align ( sha_label, LV_ALIGN_TOP_MID, 110, 0 );
     lv_obj_add_style ( sha_label, &shaStyle, 0 );
 
     lv_label_set_text ( rpm_desc_label, "Rpm" );
