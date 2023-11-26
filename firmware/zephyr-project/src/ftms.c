@@ -49,7 +49,7 @@ static inline int bt_gatt_indicate_uuid ( struct bt_conn *conn,
                                           const void *data,
                                           uint16_t len )
 {
-    struct bt_gatt_indicate_params params;
+    static struct bt_gatt_indicate_params params;
     memset ( &params, 0, sizeof ( params ) );
 
     params.uuid = uuid;
