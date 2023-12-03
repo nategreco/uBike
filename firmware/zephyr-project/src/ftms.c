@@ -217,7 +217,7 @@ BT_GATT_SERVICE_DEFINE (
                              NULL ),
     BT_GATT_CHARACTERISTIC ( BLUE_UUID_FITNESS_CONTROL_POINT_CHAR,
                              BT_GATT_CHRC_WRITE | BT_GATT_CHRC_NOTIFY,
-                             BT_GATT_PERM_WRITE | BT_GATT_PERM_WRITE_ENCRYPT,
+                             BT_GATT_PERM_WRITE,
                              NULL,
                              write_control,
                              NULL ),
