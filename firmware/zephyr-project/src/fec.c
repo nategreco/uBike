@@ -204,7 +204,7 @@ BT_GATT_SERVICE_DEFINE (
     BT_GATT_CHARACTERISTIC ( BLE_UUID_FEC_TX_CHAR,
                              BT_GATT_CHRC_WRITE
                                  | BT_GATT_CHRC_WRITE_WITHOUT_RESP,
-                             BT_GATT_PERM_WRITE | BT_GATT_PERM_WRITE_ENCRYPT,
+                             BT_GATT_PERM_WRITE,
                              NULL,
                              tx_cb,
                              NULL ) );

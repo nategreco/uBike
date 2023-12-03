@@ -40,7 +40,7 @@ The hardware is composed of the following components:
 ### Software Tools
 * FreeCAD - Housing modeling
 * KiCad - PCB Design
-* nRF Connect w/ Visual Studio Code extension - Firmware Development
+* nRF Connect 2.3.0 w/ Visual Studio Code extension - Firmware Development
 * Python - Misc development and testing scripts
 
 ### Building Firmware

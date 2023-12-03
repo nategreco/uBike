@@ -36,28 +36,12 @@ LOG_MODULE_REGISTER ( ftms );
 static set_targets_callback_t setTargetsCbFunc = NULL;
 static bool ftms_bike_notify = false;
 static bool ftms_status_notify = false;
+static bool ftms_control_notify = false;
 K_SEM_DEFINE ( ftms_sem, 0, 1 );
 
 void ftmsSetTargetsCb ( set_targets_callback_t func )
 {
     setTargetsCbFunc = func;
-}
-
-static inline int bt_gatt_indicate_uuid ( struct bt_conn *conn,
-                                          const struct bt_uuid *uuid,
-                                          const struct bt_gatt_attr *attr,
-                                          const void *data,
-                                          uint16_t len )
-{
-    struct bt_gatt_indicate_params params;
-    memset ( &params, 0, sizeof ( params ) );
-
-    params.uuid = uuid;
-    params.attr = attr;
-    params.data = data;
-    params.len = len;
-
-    return bt_gatt_indicate ( conn, &params );
 }
 
 // Config change callback
@@ -82,10 +66,10 @@ static void ftms_status_ccc_changed ( const struct bt_gatt_attr *attr,
 static void ftms_control_ccc_changed ( const struct bt_gatt_attr *attr,
                                        uint16_t value )
 {
-    bool indic_enabled = ( value == BT_GATT_CCC_INDICATE );
+    ftms_control_notify = ( value == BT_GATT_CCC_NOTIFY );
 
-    LOG_INF ( "FTMS control point indications %s",
-              indic_enabled ? "enabled" : "disabled" );
+    LOG_INF ( "FTMS control point notifications %s",
+              ftms_control_notify ? "enabled" : "disabled" );
 }
 
 static ble_ftms_features_t ftms_features;
@@ -232,8 +216,8 @@ BT_GATT_SERVICE_DEFINE (
                              NULL,
                              NULL ),
     BT_GATT_CHARACTERISTIC ( BLUE_UUID_FITNESS_CONTROL_POINT_CHAR,
-                             BT_GATT_CHRC_WRITE | BT_GATT_CHRC_INDICATE,
-                             BT_GATT_PERM_WRITE | BT_GATT_PERM_WRITE_ENCRYPT,
+                             BT_GATT_CHRC_WRITE | BT_GATT_CHRC_NOTIFY,
+                             BT_GATT_PERM_WRITE,
                              NULL,
                              write_control,
                              NULL ),
@@ -254,6 +238,11 @@ static void control_response ( struct bt_conn *conn,
                                const void *data,
                                uint16_t data_len )
 {
+    if ( !ftms_bike_notify ) {
+        LOG_ERR ( "Control point notifications not enabled!" );
+        return;
+    }
+
     ctrl_point_resp_t *resp;
     uint8_t buf [sizeof ( ctrl_point_resp_t ) + data_len];
 
@@ -264,12 +253,11 @@ static void control_response ( struct bt_conn *conn,
     if ( data && data_len ) {
         memcpy ( &resp->param, data, data_len );
     }
-    // Or notify?
-    bt_gatt_indicate_uuid ( conn,
-                            BLUE_UUID_FITNESS_CONTROL_POINT_CHAR,
-                            attr,
-                            buf,
-                            sizeof ( buf ) );
+    bt_gatt_notify_uuid ( conn,
+                          BLUE_UUID_FITNESS_CONTROL_POINT_CHAR,
+                          attr,
+                          buf,
+                          sizeof ( buf ) );
 }
 
 static int ftms_init ( const struct device *dev )
