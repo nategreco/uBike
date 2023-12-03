@@ -560,20 +560,15 @@ void main ( void )
 
     LOG_INF ( "Startup complete!  Entering loop..." );
     uint32_t exec_ms;
-    uint32_t cycle = 0;
     bike_data_t bikeData;
     while ( 1 ) {
         // Set start time
         start_ms = k_uptime_get_32();
-        LOG_INF ( "Execution cycle: %lu", cycle++ );
 
         // Update bike
         gpio_pin_toggle_dt ( &led );
-        //LOG_INF ( "Before updateBike()" );
         updateBike();
-        //LOG_INF ( "Before getBikeData()" );
         bikeData = getBikeData();
-        //LOG_INF ( "Before cscs notify" );
 #if defined( CONFIG_BOARD_NRF52840DK_NRF52840 ) \
     || defined( CONFIG_BOARD_NRF52840DONGLE_NRF52840 )
         bikeData.act_rpm = ( sys_rand32_get() % 21 ) + 80;
@@ -582,24 +577,18 @@ void main ( void )
 
         // Update bluetooth services
         bt_cscs_bike_notify ( bikeData );
-        //LOG_INF ( "Before cps notify" );
         bt_cps_notify ( bikeData );
-        //LOG_INF ( "Before ftms bike data notify" );
         bt_ftms_bike_notify ( bikeData );
-        //LOG_INF ( "Before ftms status notify" );
         // bt_fec_update ( bikeData );
         bt_ftms_status_notify();
-        //LOG_INF ( "Before updateDisplay()" );
 
         // Update display
         updateDisplay ( bikeData );
-        //LOG_INF ( "Before sleep" );
 
         // Sleep to hit cycle target
         exec_ms = k_uptime_get_32() - start_ms;
         if ( exec_ms < TGT_CYCLE_MS ) {
             k_msleep ( TGT_CYCLE_MS - exec_ms );
         }
-        //LOG_INF ( "After sleep" );
     }
 }
