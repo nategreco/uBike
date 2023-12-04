@@ -165,7 +165,7 @@ int send_cmd ( cmd_msg_data_t cmd )
 {
 #if defined( CONFIG_BOARD_NRF52840DK_NRF52840 ) \
     || defined( CONFIG_BOARD_NRF52840DONGLE_NRF52840 )
-    return;
+    return -1;
 #endif
 
     // Check the semaphore isn't taken

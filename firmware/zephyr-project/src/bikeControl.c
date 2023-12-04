@@ -19,10 +19,11 @@
 #include "bikeControl.h"
 
 #include <math.h>
-#include <zephyr/logging/log.h>
 #include <zephyr/kernel.h>
+#include <zephyr/logging/log.h>
 
 #include "asciiModbus.h"
+
 
 LOG_MODULE_REGISTER ( bike );
 static send_msg_callback_t sendMsgCbFunc = NULL;
@@ -38,8 +39,8 @@ static cmd_msg_data_t RPM_REQ = { RPM_NODE, READ_MULTI_HOLD, 0x0002, 0x0000 };
 static cmd_msg_data_t INC_REQ = { INC_NODE, READ_MULTI_HOLD, 0x0002, 0x0000 };
 static cmd_msg_data_t SET_RES = { RES_NODE, WRITE_HOLD, 0x0005, INIT_RES };
 static cmd_msg_data_t SET_INC = { INC_NODE, WRITE_HOLD, 0X0001, INIT_INC };
-static cmd_msg_data_t ZERO_RPM
-    = { INC_NODE, WRITE_HOLD, 0X0004, 0x0000 };  // TODO - Send on stop
+/*static cmd_msg_data_t ZERO_RPM
+    = { INC_NODE, WRITE_HOLD, 0X0004, 0x0000 };*/  // TODO - Send on stop
 
 // Control parameters
 static uint16_t act_rpm = 0;
@@ -89,7 +90,7 @@ static uint16_t calc_res()
 
     // 1% grade is worth 4 counts
     res += 4 * ( ( act_inc - 20 ) / 2 );
-    
+
     // Clip
     if ( res < 15 ) {
         return 15;

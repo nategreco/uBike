@@ -21,7 +21,6 @@
 
 #include <string.h>
 #include <zephyr/types.h>
-#include <zephyr/zephyr.h>
 
 #include "common.h"
 

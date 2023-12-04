@@ -98,22 +98,6 @@ void updateBacklight ( bool wakeUp )
                  ( PWM_PERIOD * ( 100 - intensity ) ) / 100 );
 }
 
-static void k_callback ( const struct device *dev,
-                         uint32_t row,
-                         uint32_t col,
-                         bool pressed )
-{
-    ARG_UNUSED ( dev );
-    if ( pressed ) {
-        LOG_INF ( "row = %u col = %u\n", row, col );
-        updateBacklight ( true );
-
-        if ( col >= 410 ) {
-            resetTime();
-        }
-    }
-}
-
 void resetTime()
 {
     LOG_INF ( "Resetting timer..." );

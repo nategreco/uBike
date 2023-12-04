@@ -4,5 +4,8 @@ hardware/board/kicad/uBike-backups/*
 
 # zephyr files
 firmware/zephyr-project/.*
-firmware/zephyr-project/build/*
+firmware/zephyr-project/build*
 firmware/zephyr-project/*code-workspace
+
+# vscode files
+firmware/.vscode
