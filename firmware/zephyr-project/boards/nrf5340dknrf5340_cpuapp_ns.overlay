@@ -1,0 +1,87 @@
+/*
+ * Universal Bike Controller
+ * Copyright (C) 2022-2023, Greco Engineering Solutions LLC
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+ / {
+	chosen {
+		zephyr,display = &dummy_dc;
+		zephyr,flash = &flash0;
+		zephyr,keyboard-scan = &touch_controller;
+	};
+
+	aliases {
+		addinc = &button0;
+		addres = &button2;
+		subinc = &button1;
+		subres = &button3;
+		led0 = &led0;
+		rs485de = &led1;
+		cptrst = &led2;
+		lcdrst = &led3;
+		blpwm = &pwm_led0;
+	};
+
+	dummy_dc: dummy_dc {
+		compatible = "zephyr,dummy-dc";
+		height = <320>;
+		width = <480>;
+	};
+};
+
+&flash0 {
+	partitions {
+		boot_partition: partition@0 {
+				reg = <0x00000000 0x00008000>;
+		};
+	};
+};
+
+&uart0 {
+	status = "okay";
+};
+
+&uart1 {
+	compatible = "nordic,nrf-uarte";
+	current-speed = <38400>;
+	status = "okay";
+	pinctrl-0 = <&uart1_default>;
+	pinctrl-1 = <&uart1_sleep>;
+	pinctrl-names = "default", "sleep";
+};
+
+&rtc0 {
+	status = "okay";
+};
+
+&i2c1 {
+	compatible = "nordic,nrf-twim";
+	status = "okay";
+	clock-frequency = <I2C_BITRATE_FAST>;
+	pinctrl-0 = <&i2c1_default>;
+	pinctrl-1 = <&i2c1_sleep>;
+	pinctrl-names = "default", "sleep";
+
+	touch_controller: ft5336@38 {
+		compatible = "focaltech,ft5336";
+		reg = <0x38>;
+		int-gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>; // YD
+	};
+};
+
+&spi1 {
+	status = "disabled";
+};

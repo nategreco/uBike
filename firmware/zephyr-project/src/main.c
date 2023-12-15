@@ -150,7 +150,7 @@ static const struct gpio_dt_spec addInc = GPIO_DT_SPEC_GET ( BUT1_NODE, gpios );
 static const struct gpio_dt_spec subInc = GPIO_DT_SPEC_GET ( BUT3_NODE, gpios );
 static const struct gpio_dt_spec addRes = GPIO_DT_SPEC_GET ( BUT2_NODE, gpios );
 static const struct gpio_dt_spec subRes = GPIO_DT_SPEC_GET ( BUT4_NODE, gpios );
-static const struct device *rtc2_dev = DEVICE_DT_GET ( DT_NODELABEL ( rtc2 ) );
+static const struct device *rtc2_dev = DEVICE_DT_GET ( DT_NODELABEL ( rtc0 ) );
 struct counter_alarm_cfg alarmCfg;
 static struct gpio_callback addIncCbData;
 static struct gpio_callback subIncCbData;
@@ -164,7 +164,8 @@ static uint8_t tx_buf [TX_BUFF_SIZE] = { 0 };
 int send_cmd ( cmd_msg_data_t cmd )
 {
 #if defined( CONFIG_BOARD_NRF52840DK_NRF52840 ) \
-    || defined( CONFIG_BOARD_NRF52840DONGLE_NRF52840 )
+    || defined( CONFIG_BOARD_NRF52840DONGLE_NRF52840 ) \
+    || defined ( CONFIG_BOARD_NRF5340DK_NRF5340_CPUAPP_NS )
     return -1;
 #endif
 
@@ -525,7 +526,7 @@ void main ( void )
     }
 
     LOG_INF ( "Initializing bluetooth..." );
-    smp_bt_register();
+    //smp_bt_register();
     ret = bt_enable ( NULL );
     if ( ret ) {
         LOG_ERR ( "Bluetooth init failed (err %d)", ret );
@@ -570,7 +571,8 @@ void main ( void )
         updateBike();
         bikeData = getBikeData();
 #if defined( CONFIG_BOARD_NRF52840DK_NRF52840 ) \
-    || defined( CONFIG_BOARD_NRF52840DONGLE_NRF52840 )
+    || defined( CONFIG_BOARD_NRF52840DONGLE_NRF52840 ) \
+    || defined ( CONFIG_BOARD_NRF5340DK_NRF5340_CPUAPP_NS )
         bikeData.act_rpm = ( sys_rand32_get() % 21 ) + 80;
         bikeData.watts = ( sys_rand32_get() % 101 ) + 200;
 #endif
