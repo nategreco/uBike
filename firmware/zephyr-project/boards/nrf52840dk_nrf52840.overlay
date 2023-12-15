@@ -19,6 +19,8 @@
  / {
 	chosen {
 		zephyr,display = &dummy_dc;
+		zephyr,flash = &flash0;
+		zephyr,keyboard-scan = &touch_controller;
 	};
 
 	aliases {
@@ -29,6 +31,8 @@
 		led0 = &led0;
 		rs485de = &led1;
 		cptrst = &led2;
+		lcdrst = &led3;
+		blpwm = &pwm_led0;
 	};
 
 	dummy_dc: dummy_dc {
@@ -36,4 +40,31 @@
 		height = <320>;
 		width = <480>;
 	};
+};
+
+&flash0 {
+	partitions {
+		boot_partition: partition@0 {
+				reg = <0x00000000 0x00008000>;
+		};
+	};
+};
+
+&i2c1 {
+	compatible = "nordic,nrf-twim";
+	status = "okay";
+	clock-frequency = <I2C_BITRATE_FAST>;
+	pinctrl-0 = <&i2c1_default>;
+	pinctrl-1 = <&i2c1_sleep>;
+	pinctrl-names = "default", "sleep";
+
+	touch_controller: ft5336@38 {
+		compatible = "focaltech,ft5336";
+		reg = <0x38>;
+		int-gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>; // YD
+	};
+};
+
+&spi1 {
+	status = "disabled";
 };
