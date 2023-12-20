@@ -16,6 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <nrfx_timer.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -23,7 +24,6 @@
 #include <zephyr/bluetooth/conn.h>
 #include <zephyr/bluetooth/gatt.h>
 #include <zephyr/bluetooth/uuid.h>
-#include <zephyr/drivers/counter.h>
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/drivers/uart.h>
 #include <zephyr/kernel.h>
@@ -59,8 +59,7 @@ LOG_MODULE_REGISTER ( app );
 #define BUT3_NODE DT_ALIAS ( addres )
 #define BUT4_NODE DT_ALIAS ( subres )
 
-#define INC_ALARM_ID 0
-#define RES_ALARM_ID 1
+#define TIMER_INST_IDX 0
 
 #define RX_BUFF_SIZE 100
 #define TX_BUFF_SIZE 20
@@ -150,8 +149,6 @@ static const struct gpio_dt_spec addInc = GPIO_DT_SPEC_GET ( BUT1_NODE, gpios );
 static const struct gpio_dt_spec subInc = GPIO_DT_SPEC_GET ( BUT3_NODE, gpios );
 static const struct gpio_dt_spec addRes = GPIO_DT_SPEC_GET ( BUT2_NODE, gpios );
 static const struct gpio_dt_spec subRes = GPIO_DT_SPEC_GET ( BUT4_NODE, gpios );
-static const struct device *rtc2_dev = DEVICE_DT_GET ( DT_NODELABEL ( rtc0 ) );
-struct counter_alarm_cfg alarmCfg;
 static struct gpio_callback addIncCbData;
 static struct gpio_callback subIncCbData;
 static struct gpio_callback addResCbData;
@@ -161,11 +158,14 @@ static uint8_t rx_buf_2 [RX_BUFF_SIZE] = { 0 };
 static uint8_t rx_buf_num = 1;
 static uint8_t tx_buf [TX_BUFF_SIZE] = { 0 };
 
+static nrfx_timer_t timer_inst = NRFX_TIMER_INSTANCE ( TIMER_INST_IDX );
+static nrfx_timer_config_t config = NRFX_TIMER_DEFAULT_CONFIG;
+
 int send_cmd ( cmd_msg_data_t cmd )
 {
-#if defined( CONFIG_BOARD_NRF52840DK_NRF52840 ) \
+#if defined( CONFIG_BOARD_NRF52840DK_NRF52840 )        \
     || defined( CONFIG_BOARD_NRF52840DONGLE_NRF52840 ) \
-    || defined ( CONFIG_BOARD_NRF5340DK_NRF5340_CPUAPP_NS )
+    || defined( CONFIG_BOARD_NRF5340DK_NRF5340_CPUAPP_NS )
     return -1;
 #endif
 
@@ -202,58 +202,69 @@ int send_cmd ( cmd_msg_data_t cmd )
     return 0;
 }
 
-static void counter_interrupt_cb ( const struct device *counter_dev,
-                                   uint8_t chan_id,
-                                   uint32_t ticks,
-                                   void *user_data )
+static void timer_handler ( nrf_timer_event_t event_type, void * )
 {
-    buttonStatus_t adj;
-    uint64_t delay_us;
-    if ( chan_id == INC_ALARM_ID ) {
-        adj = evaluateButton ( gpio_pin_get ( addInc.port, addInc.pin ),
-                               gpio_pin_get ( subInc.port, subInc.pin ) );
-        if ( adj == NOTHING ) {
-            return;
-        }
+    // Verify event type
+    if ( event_type != NRF_TIMER_EVENT_COMPARE0 ) {
+        LOG_ERR ( "Invalid timer event type: %d!", event_type );
+        nrfx_timer_clear ( &timer_inst );
+        return;
+    }
+
+    // Check incline status
+    buttonStatus_t adj = NOTHING;
+    uint32_t delay_us = 0;
+    adj = evaluateButton ( gpio_pin_get ( addInc.port, addInc.pin ),
+                           gpio_pin_get ( subInc.port, subInc.pin ) );
+    if ( adj != NOTHING ) {
         adjustIncline ( adj );
-        delay_us = INC_BUTTON_DLY_US;
-    } else if ( chan_id == RES_ALARM_ID ) {
-        adj = evaluateButton ( gpio_pin_get ( addRes.port, addRes.pin ),
-                               gpio_pin_get ( subRes.port, subRes.pin ) );
-        if ( adj == NOTHING ) {
-            return;
-        }
+        delay_us = INC_BUTTON_DLY_MS;
+    }
+
+    // Check resistance button status
+    adj = evaluateButton ( gpio_pin_get ( addRes.port, addRes.pin ),
+                           gpio_pin_get ( subRes.port, subRes.pin ) );
+    if ( adj != NOTHING ) {
         adjustResistance ( adj );
-        delay_us = RES_BUTTON_DLY_US;
-    } else {
-        LOG_ERR ( "Invalid channel id: %d!", chan_id );
+        delay_us = RES_BUTTON_DLY_MS;
+    }
+
+    if ( !delay_us ) {
+        LOG_INF ( "Timer completed" );
+        nrfx_timer_clear ( &timer_inst );
         return;
     }
 
     // Restart
-    alarmCfg.ticks = counter_us_to_ticks ( rtc2_dev, delay_us );
-    int err = counter_set_channel_alarm ( counter_dev, chan_id, &alarmCfg );
-    if ( err ) {
-        LOG_ERR ( "Alarm %d could not be set! Error: %d", chan_id, err );
-    }
+    uint32_t desired_ticks = nrfx_timer_ms_to_ticks ( &timer_inst, delay_us );
+    nrfx_timer_extended_compare ( &timer_inst,
+                                  NRF_TIMER_CC_CHANNEL0,
+                                  desired_ticks,
+                                  NRF_TIMER_SHORT_COMPARE0_STOP_MASK,
+                                  true );
+    nrfx_timer_enable ( &timer_inst );
 }
 
 static void incPressed ( const struct device *dev,
                          struct gpio_callback *cb,
                          uint32_t pins )
 {
-    alarmCfg.ticks = counter_us_to_ticks ( rtc2_dev, INC_BUTTON_DLY_US );
-    int err = counter_set_channel_alarm ( rtc2_dev, INC_ALARM_ID, &alarmCfg );
-    if ( err ) {
-        LOG_ERR ( "Alarm %d could not be set! Error: %d", INC_ALARM_ID, err );
-    } else {
-        // Setting counter fails if its already been set, which is often the
-        // case when there is bounce in the signal.  So only increment if
-        // setting the timer does not fail, this implements a psuedo-debounce.
+    if ( !nrfx_timer_is_enabled ( &timer_inst ) ) {
+        // Adjust
         buttonStatus_t adj
             = evaluateButton ( gpio_pin_get ( addInc.port, addInc.pin ),
                                gpio_pin_get ( subInc.port, subInc.pin ) );
         adjustIncline ( adj );
+
+        // Start timer
+        uint32_t desired_ticks
+            = nrfx_timer_ms_to_ticks ( &timer_inst, INC_BUTTON_DLY_MS );
+        nrfx_timer_extended_compare ( &timer_inst,
+                                      NRF_TIMER_CC_CHANNEL0,
+                                      desired_ticks,
+                                      NRF_TIMER_SHORT_COMPARE0_STOP_MASK,
+                                      true );
+        nrfx_timer_enable ( &timer_inst );
     }
 }
 
@@ -261,18 +272,22 @@ static void resPressed ( const struct device *dev,
                          struct gpio_callback *cb,
                          uint32_t pins )
 {
-    alarmCfg.ticks = counter_us_to_ticks ( rtc2_dev, RES_BUTTON_DLY_US );
-    int err = counter_set_channel_alarm ( rtc2_dev, RES_ALARM_ID, &alarmCfg );
-    if ( err ) {
-        LOG_ERR ( "Alarm %d could not be set! Error: %d", RES_ALARM_ID, err );
-    } else {
-        // Setting counter fails if its already been set, which is often the
-        // case when there is bounce in the signal.  So only increment if
-        // setting the timer does not fail, this implements a psuedo-debounce.
+    if ( !nrfx_timer_is_enabled ( &timer_inst ) ) {
+        // Adjust
         buttonStatus_t adj
             = evaluateButton ( gpio_pin_get ( addRes.port, addRes.pin ),
                                gpio_pin_get ( subRes.port, subRes.pin ) );
         adjustResistance ( adj );
+
+        // Start timer
+        uint32_t desired_ticks
+            = nrfx_timer_ms_to_ticks ( &timer_inst, RES_BUTTON_DLY_MS );
+        nrfx_timer_extended_compare ( &timer_inst,
+                                      NRF_TIMER_CC_CHANNEL0,
+                                      desired_ticks,
+                                      NRF_TIMER_SHORT_COMPARE0_STOP_MASK,
+                                      true );
+        nrfx_timer_enable ( &timer_inst );
     }
 }
 
@@ -482,15 +497,16 @@ void main ( void )
         LOG_ERR ( "Setting of input callbacks failed on %d devices!", ret );
         return;
     }
-
+    uint32_t start_ms = k_uptime_get_32();
+#if !defined( CONFIG_BOARD_NRF52840DK_NRF52840 )        \
+    && !defined( CONFIG_BOARD_NRF52840DONGLE_NRF52840 ) \
+    && !defined( CONFIG_BOARD_NRF5340DK_NRF5340_CPUAPP_NS )
     LOG_INF ( "Starting Uart1..." );
-    uart = DEVICE_DT_GET ( DT_NODELABEL ( uart1 ) );
     if ( !device_is_ready ( uart ) ) {
         LOG_ERR ( "Uart1 not ready!" );
         return;
     }
     LOG_INF ( "Checking Uart1 ready..." );
-    uint32_t start_ms = k_uptime_get_32();
     do {
         ret = uart_err_check ( uart );
         if ( ret ) {
@@ -524,9 +540,10 @@ void main ( void )
         LOG_ERR ( "Uart1 rx buffer enable failure: %d", ret );
         return;
     }
+#endif
 
     LOG_INF ( "Initializing bluetooth..." );
-    //smp_bt_register();
+    // smp_bt_register();
     ret = bt_enable ( NULL );
     if ( ret ) {
         LOG_ERR ( "Bluetooth init failed (err %d)", ret );
@@ -535,18 +552,13 @@ void main ( void )
     LOG_INF ( "Starting advertising..." );
     adv_start();
 
-    LOG_INF ( "Starting counter..." );
-    if ( !device_is_ready ( rtc2_dev ) ) {
-        LOG_ERR ( "Counter is not ready!" );
-        return;
-    }
-    if ( counter_start ( rtc2_dev ) ) {
+    LOG_INF ( "Starting timer..." );
+    config.bit_width = NRF_TIMER_BIT_WIDTH_32;
+    if ( nrfx_timer_init ( &timer_inst, &config, timer_handler ) ) {
         LOG_ERR ( "Counter failed to start!" );
         return;
     }
-    alarmCfg.flags = 0;
-    alarmCfg.callback = counter_interrupt_cb;
-    alarmCfg.user_data = &alarmCfg;
+    nrfx_timer_clear ( &timer_inst );
 
     // Configure nodes
     LOG_INF ( "Configuring bike nodes..." );
@@ -570,9 +582,9 @@ void main ( void )
         gpio_pin_toggle_dt ( &led );
         updateBike();
         bikeData = getBikeData();
-#if defined( CONFIG_BOARD_NRF52840DK_NRF52840 ) \
+#if defined( CONFIG_BOARD_NRF52840DK_NRF52840 )        \
     || defined( CONFIG_BOARD_NRF52840DONGLE_NRF52840 ) \
-    || defined ( CONFIG_BOARD_NRF5340DK_NRF5340_CPUAPP_NS )
+    || defined( CONFIG_BOARD_NRF5340DK_NRF5340_CPUAPP_NS )
         bikeData.act_rpm = ( sys_rand32_get() % 21 ) + 80;
         bikeData.watts = ( sys_rand32_get() % 101 ) + 200;
 #endif

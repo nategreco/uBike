@@ -23,8 +23,8 @@
 
 #include "common.h"
 
-#define INC_BUTTON_DLY_US 250000
-#define RES_BUTTON_DLY_US 750000
+#define INC_BUTTON_DLY_MS 250
+#define RES_BUTTON_DLY_MS 750
 
 #define RPM_NODE 0x51
 #define INC_NODE 0x41
