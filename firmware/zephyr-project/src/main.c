@@ -483,7 +483,6 @@ void main ( void )
     }
 
     LOG_INF ( "Starting Uart1..." );
-    uart = DEVICE_DT_GET ( DT_NODELABEL ( uart1 ) );
     if ( !device_is_ready ( uart ) ) {
         LOG_ERR ( "Uart1 not ready!" );
         return;

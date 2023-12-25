@@ -21,7 +21,7 @@
 
 #include <string.h>
 #include <zephyr/types.h>
-#include <zephyr/zephyr.h>
+#include <zephyr/kernel.h>
 
 #include "common.h"
 
