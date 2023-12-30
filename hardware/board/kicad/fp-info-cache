@@ -1,4 +1,4 @@
-22475479585270943
+22472072072090507
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -92547,13 +92547,6 @@ L_Bourns_5050
 2
 2
 libs
-RDX0007A-MFG
-
-TPSM863252RDXR 
-0
-19
-19
-libs
 SOIC127P600X175-8N
 D0008A
 Integrated Circuit
@@ -92576,13 +92569,6 @@ TAG-CONNECT_TC2050-IDC-NL
 10
 libs
 TPSM863252RDX
-
-PTPSM863252RDXR 
-0
-19
-19
-libs
-VREG_TPSM863257RDXR
 
 
 0
