@@ -51,7 +51,6 @@ LOG_MODULE_REGISTER ( app );
 
 #define LED0_NODE DT_ALIAS ( led0 )
 #define RS485DE_NODE DT_ALIAS ( rs485de )
-#define LCD_RST_NODE DT_ALIAS ( lcdrst )
 #define CPT_RST_NODE DT_ALIAS ( cptrst )
 
 #define BUT1_NODE DT_ALIAS ( addinc )
@@ -141,8 +140,6 @@ K_MUTEX_DEFINE ( mutex );
 static const struct gpio_dt_spec led = GPIO_DT_SPEC_GET ( LED0_NODE, gpios );
 static const struct gpio_dt_spec rs485de
     = GPIO_DT_SPEC_GET ( RS485DE_NODE, gpios );
-static const struct gpio_dt_spec lcdRst
-    = GPIO_DT_SPEC_GET ( LCD_RST_NODE, gpios );
 static const struct gpio_dt_spec cptRst
     = GPIO_DT_SPEC_GET ( CPT_RST_NODE, gpios );
 static const struct device *uart = DEVICE_DT_GET ( DT_NODELABEL ( uart1 ) );
@@ -391,9 +388,6 @@ void main ( void )
     if ( !device_is_ready ( rs485de.port ) ) {
         ret++;
     }
-    if ( !device_is_ready ( lcdRst.port ) ) {
-        ret++;
-    }
     if ( !device_is_ready ( cptRst.port ) ) {
         ret++;
     }
@@ -417,9 +411,6 @@ void main ( void )
         ret++;
     }
     if ( gpio_pin_configure_dt ( &rs485de, GPIO_OUTPUT_INACTIVE ) < 0 ) {
-        ret++;
-    }
-    if ( gpio_pin_configure_dt ( &lcdRst, GPIO_OUTPUT_INACTIVE ) < 0 ) {
         ret++;
     }
     if ( gpio_pin_configure_dt ( &cptRst, GPIO_OUTPUT_INACTIVE ) < 0 ) {

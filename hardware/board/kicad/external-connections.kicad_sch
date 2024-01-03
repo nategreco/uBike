@@ -1763,7 +1763,7 @@
     (effects (font (size 2.54 2.54)) (justify left bottom))
     (uuid 6b78d207-8e72-4b8b-823c-eac60a837132)
   )
-  (text "*DE Uses\ninternal pull-up" (at 54.483 44.45 0)
+  (text "*DE and TX Use\ninternal pull-ups" (at 54.483 46.482 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 83b561be-41ff-4a1b-89d6-bcf1f13a3c54)
   )
