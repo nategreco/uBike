@@ -24,7 +24,7 @@
 "R9, R10","1k69","Resistor_SMD:R_0603_1608Metric","Thick Film Resistor – 1.69k (1/4W)","Panasonic","ERJ-PA3F1691V","667-ERJ-PA3F1691V","","2"
 "R11","1k","Resistor_SMD:R_0603_1608Metric","Thick Film Resistor – 1k (1/4W)","Panasonic","ERJ-PA3F1001V","667-ERJ-PA3F1001V","","1"
 "R13","120","Resistor_SMD:R_0603_1608Metric","Thick Film Resistor – 120 (1/4W)","-","-","","","1"
-"R14, R15","10","Resistor_SMD:R_0603_1608Metric","Thick Film Resistor – 10 (1/4W)","Panasonic","ERJ-PA3F10R0V","667-ERJ-PA3F10R0V","","2"
+"R14, R15, R21-R24","10","Resistor_SMD:R_0603_1608Metric","Thick Film Resistor – 10 (1/4W)","Panasonic","ERJ-PA3F10R0V","667-ERJ-PA3F10R0V","","6"
 "R16","220k","Resistor_SMD:R_0603_1608Metric","Thick Film Resistor – 220k (1/4W)","Panasonic","ERJ-PA3F2203V","667-ERJ-PA3F2203V","","1"
 "R17","30k","Resistor_SMD:R_0603_1608Metric","Thick Film Resistor – 30k (1/4W)","Panasonic","ERJ-PA3F3002V","667-ERJ-PA3F3002V","","1"
 "R18","150","Resistor_SMD:R_0805_2012Metric","Thick Film Resistor – 150 (1/2W)","Panasonic","ERJ-P06F1500V","667-ERJ-P06F1500V","","1"
