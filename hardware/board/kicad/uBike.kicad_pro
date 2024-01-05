@@ -457,7 +457,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "uBike.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""

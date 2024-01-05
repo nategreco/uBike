@@ -838,7 +838,7 @@
       (net 99 "Net-(D4-Pad2)") (pinfunction "2") (pintype "passive") (tstamp 67a6b1f2-29b9-418e-b4f9-e18eb480e252))
     (pad "3" smd rect (at 1 0) (size 0.6 1.25) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 1 "GND") (pinfunction "3") (pintype "passive") (tstamp 84c53ddc-37b9-4ea0-afff-1de6b6955fc0))
-    (model "CDSOT23-SM712.stp"
+    (model "${KIPRJMOD}/libs/CDSOT23-SM712.stp"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -861,7 +861,7 @@
     (property "ki_description" "TVS Diode Dual Bi-Dir 7/12V 30KV SOT23 Bourns CDSOT23-SM712 Dual Bi-Directional TVS Diode, 400W peak, 3-Pin SOT-23")
     (path "/e1032325-3e03-4636-92e2-c531782b9fc5/a3b752f3-2a66-41ae-863c-59d6bd2116b5")
     (attr smd)
-    (fp_text reference "D6" (at 2.4 0 -180) (layer "F.SilkS")
+    (fp_text reference "D6" (at 2.4 0) (layer "F.SilkS")
         (effects (font (size 1 1) (thickness 0.15) bold))
       (tstamp c9f19522-287d-4b53-bea7-21df72b1e543)
     )
@@ -903,7 +903,7 @@
       (net 101 "Net-(D6-Pad2)") (pinfunction "2") (pintype "passive") (tstamp 21d18205-ab2f-476a-81c8-87bb1353ced5))
     (pad "3" smd rect (at 1 0) (size 0.6 1.25) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 1 "GND") (pinfunction "3") (pintype "passive") (tstamp bd366a6c-72fa-4bf5-8e20-9ba71f75f495))
-    (model "CDSOT23-SM712.stp"
+    (model "${KIPRJMOD}/libs/CDSOT23-SM712.stp"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1225,8 +1225,8 @@
       (net 61 "unconnected-(J5-PadMH1)") (pinfunction "MH1") (pintype "passive+no_connect") (tstamp b178960e-1d54-44dd-92c7-42484a877694))
     (pad "MH2" thru_hole circle (at 10.07 2.71 270) (size 3.45 3.45) (drill 2.3) (layers "*.Cu" "*.Mask")
       (net 62 "unconnected-(J5-PadMH2)") (pinfunction "MH2") (pintype "passive+no_connect") (tstamp d3c58ad3-ddc9-4b4b-8b5b-2dec3745282f))
-    (model "87520-0010BLF.stp"
-      (offset (xyz 3.499999947 0.999999985 3.459999986))
+    (model "${KIPRJMOD}/libs/87520-0010BLF.stp"
+      (offset (xyz 3.5 1 3))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
     )
@@ -2105,7 +2105,7 @@
       (net 32 "Net-(U1-B)") (pinfunction "B") (pintype "passive") (tstamp 1219bf52-b6db-4dcb-a3be-e39d446f74ce))
     (pad "8" smd rect (at 2.711 -1.905 270) (size 0.65 1.528) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 2 "+3.3V") (pinfunction "VCC") (pintype "passive") (tstamp 6e6f6d9f-5038-4ba4-99b7-e1b070b7f43c))
-    (model "SN65HVD08DR.stp"
+    (model "${KIPRJMOD}/libs/SN65HVD08DR.stp"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2319,7 +2319,7 @@
       (net 49 "RS485_A") (pinfunction "2") (pintype "passive") (tstamp a78dc6a3-98cb-4500-a3f4-178233670e20))
     (pad "3" smd rect (at 1 0 270) (size 0.6 1.25) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 1 "GND") (pinfunction "3") (pintype "passive") (tstamp 32b007c7-806a-417a-b2f8-a28ca6d5cfeb))
-    (model "CDSOT23-SM712.stp"
+    (model "${KIPRJMOD}/libs/CDSOT23-SM712.stp"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2831,7 +2831,7 @@
       (net 38 "unconnected-(J3-PadMH2)") (pinfunction "MH2") (pintype "passive+no_connect") (tstamp a800dbab-894c-48a0-a3c2-a2f2eff9749e))
     (pad "MH3" thru_hole circle (at 8.05 -3) (size 3.45 3.45) (drill 2.3) (layers "*.Cu" "*.Mask")
       (net 39 "unconnected-(J3-PadMH3)") (pinfunction "MH3") (pintype "passive+no_connect") (tstamp f46d4410-4be1-4fb6-8617-0d6823449ca2))
-    (model "KMDGX-8S-BS.stp"
+    (model "${KIPRJMOD}/libs/KMDGX-8S-BS.stp"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3155,7 +3155,7 @@
       (net 6 "unconnected-(J1-PadMH2)") (pinfunction "MH2") (pintype "passive+no_connect") (tstamp aa07a020-f6b2-4ecc-a3ad-db76a1a4ad4e))
     (pad "MH3" thru_hole circle (at 8.05 -3) (size 3.45 3.45) (drill 2.3) (layers "*.Cu" "*.Mask")
       (net 14 "unconnected-(J1-PadMH3)") (pinfunction "MH3") (pintype "passive+no_connect") (tstamp e0429e75-6854-47d7-82e7-842e77bdb268))
-    (model "KMDGX-6S-BS.stp"
+    (model "${KIPRJMOD}/libs/KMDGX-6S-BS.stp"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3376,7 +3376,7 @@
       (net 30 "unconnected-(J2-PadMP3)") (pinfunction "MP3") (pintype "passive+no_connect") (tstamp e8369957-c9f6-4faa-96ee-713a16adb26e))
     (pad "MP4" smd rect (at 11.5 -1.4) (size 0.8 1.4) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 31 "unconnected-(J2-PadMP4)") (pinfunction "MP4") (pintype "passive+no_connect") (tstamp 2188ce85-0a3b-4ec1-bd62-e4b2fef9d95e))
-    (model "F31S-1A7L1-11040.stp"
+    (model "${KIPRJMOD}/libs/F31S-1A7L1-11040.stp"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
