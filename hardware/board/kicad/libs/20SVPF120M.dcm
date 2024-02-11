@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 20SVPF120M
+D Panasonic 120uF 20 V Polymer Aluminium Electrolytic Capacitor C6, OS-CON Series 5000h 6.3 x 5.9mm
+K
+F http://industrial.panasonic.com/cdbs/www-data/pdf/AAB8000/AAB8000C177.pdf
+$ENDCMP
+#
+#End Doc Library

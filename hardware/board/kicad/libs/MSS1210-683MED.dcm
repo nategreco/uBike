@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MSS1210-683MED
+D COILCRAFT - MSS1210-683MED - INDUCTOR, 68UH, 4.3A, 20%, PWR, 4.5MHZ
+K
+F https://www.coilcraft.com/pdfs/MSS1210.pdf
+$ENDCMP
+#
+#End Doc Library

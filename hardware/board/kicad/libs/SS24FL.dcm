@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SS24FL
+D ON SEMICONDUCTOR - SS24FL - SCHOTTKY RECT, AEC-Q101, 40V, SOD-123F
+K
+F https://www.onsemi.com/pub/Collateral/SS26FL-D.PDF
+$ENDCMP
+#
+#End Doc Library
