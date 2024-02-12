@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\Users\natha\Projects\uBike\hardware\board\kicad\uBike.kicad_sch</source>
-    <date>1/1/2024 11:14:50 AM</date>
+    <date>2/11/2024 5:42:16 PM</date>
     <tool>Eeschema 7.0.9</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -45,7 +45,17 @@
     <comp ref="C4">
       <value>10u</value>
       <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Description">10uF - Unpolarized capacitor, 25V, 10%</field>
+        <field name="Manufacturer_Name">Murata Electronics</field>
+        <field name="Manufacturer_Part_Number">GRM319R61E106MA12D</field>
+        <field name="Mouser Part Number">81-GRM319R61E106MA2D</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Description" value="10uF - Unpolarized capacitor, 25V, 10%"/>
+      <property name="Manufacturer_Name" value="Murata Electronics"/>
+      <property name="Manufacturer_Part_Number" value="GRM319R61E106MA12D"/>
+      <property name="Mouser Part Number" value="81-GRM319R61E106MA2D"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -56,7 +66,17 @@
     <comp ref="C5">
       <value>12p</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">12pF - Unpolarized capacitor, 50V, 1%</field>
+        <field name="Manufacturer_Name">Kemet</field>
+        <field name="Manufacturer_Part_Number">C0603C120F5GACTU</field>
+        <field name="Mouser Part Number">80-C0603C120F5G</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Description" value="12pF - Unpolarized capacitor, 50V, 1%"/>
+      <property name="Manufacturer_Name" value="Kemet"/>
+      <property name="Manufacturer_Part_Number" value="C0603C120F5GACTU"/>
+      <property name="Mouser Part Number" value="80-C0603C120F5G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -67,7 +87,17 @@
     <comp ref="C6">
       <value>12p</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">12pF - Unpolarized capacitor, 50V, 1%</field>
+        <field name="Manufacturer_Name">Kemet</field>
+        <field name="Manufacturer_Part_Number">C0603C120F5GACTU</field>
+        <field name="Mouser Part Number">80-C0603C120F5G</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Description" value="12pF - Unpolarized capacitor, 50V, 1%"/>
+      <property name="Manufacturer_Name" value="Kemet"/>
+      <property name="Manufacturer_Part_Number" value="C0603C120F5GACTU"/>
+      <property name="Mouser Part Number" value="80-C0603C120F5G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -78,7 +108,17 @@
     <comp ref="D2">
       <value>GREEN</value>
       <footprint>Diode_SMD:D_1206_3216Metric</footprint>
+      <fields>
+        <field name="Description">Light emitting diode (Green)</field>
+        <field name="Manufacturer_Name">Lite-On</field>
+        <field name="Manufacturer_Part_Number">LTST-C150KGKT</field>
+        <field name="Mouser Part Number">859-LTST-C150KGKT</field>
+      </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Description" value="Light emitting diode (Green)"/>
+      <property name="Manufacturer_Name" value="Lite-On"/>
+      <property name="Manufacturer_Part_Number" value="LTST-C150KGKT"/>
+      <property name="Mouser Part Number" value="859-LTST-C150KGKT"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Light emitting diode"/>
@@ -89,7 +129,15 @@
     <comp ref="H1">
       <value>MountingHole</value>
       <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <fields>
+        <field name="Description">Mounting Hole without connection</field>
+        <field name="Manufacturer_Name">-</field>
+        <field name="Manufacturer_Part_Number">-</field>
+      </fields>
       <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Description" value="Mounting Hole without connection"/>
+      <property name="Manufacturer_Name" value="-"/>
+      <property name="Manufacturer_Part_Number" value="-"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Mounting Hole without connection"/>
@@ -100,7 +148,15 @@
     <comp ref="H2">
       <value>MountingHole</value>
       <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <fields>
+        <field name="Description">Mounting Hole without connection</field>
+        <field name="Manufacturer_Name">-</field>
+        <field name="Manufacturer_Part_Number">-</field>
+      </fields>
       <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Description" value="Mounting Hole without connection"/>
+      <property name="Manufacturer_Name" value="-"/>
+      <property name="Manufacturer_Part_Number" value="-"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Mounting Hole without connection"/>
@@ -111,7 +167,15 @@
     <comp ref="H3">
       <value>MountingHole</value>
       <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <fields>
+        <field name="Description">Mounting Hole without connection</field>
+        <field name="Manufacturer_Name">-</field>
+        <field name="Manufacturer_Part_Number">-</field>
+      </fields>
       <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Description" value="Mounting Hole without connection"/>
+      <property name="Manufacturer_Name" value="-"/>
+      <property name="Manufacturer_Part_Number" value="-"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Mounting Hole without connection"/>
@@ -122,7 +186,15 @@
     <comp ref="H4">
       <value>MountingHole</value>
       <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <fields>
+        <field name="Description">Mounting Hole without connection</field>
+        <field name="Manufacturer_Name">-</field>
+        <field name="Manufacturer_Part_Number">-</field>
+      </fields>
       <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Description" value="Mounting Hole without connection"/>
+      <property name="Manufacturer_Name" value="-"/>
+      <property name="Manufacturer_Part_Number" value="-"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Mounting Hole without connection"/>
@@ -135,17 +207,18 @@
       <footprint>libs:F31S1A7L111040</footprint>
       <datasheet>https://componentsearchengine.com/Datasheets/2/F31S-1A7L1-11040.pdf</datasheet>
       <fields>
-        <field name="Description">FFC &amp; FPC Connectors F31S-1A7L1-11040-Flip type</field>
+        <field name="Description">40P FPC connector</field>
         <field name="Height">6.05</field>
-        <field name="Manufacturer_Name">AMPHENOL COMMUNICATION SOLUTIONS</field>
+        <field name="Manufacturer_Name">Amphenol ICC</field>
         <field name="Manufacturer_Part_Number">F31S-1A7L1-11040</field>
+        <field name="Mouser Part Number">649-F31S-1A7L1-11040</field>
       </fields>
       <libsource lib="F31S-1A7L1-11040" part="F31S-1A7L1-11040" description="FFC &amp; FPC Connectors F31S-1A7L1-11040-Flip type"/>
-      <property name="Description" value="FFC &amp; FPC Connectors F31S-1A7L1-11040-Flip type"/>
+      <property name="Description" value="40P FPC connector"/>
       <property name="Height" value="6.05"/>
-      <property name="Mouser Part Number" value=""/>
+      <property name="Mouser Part Number" value="649-F31S-1A7L1-11040"/>
       <property name="Mouser Price/Stock" value=""/>
-      <property name="Manufacturer_Name" value="AMPHENOL COMMUNICATION SOLUTIONS"/>
+      <property name="Manufacturer_Name" value="Amphenol ICC"/>
       <property name="Manufacturer_Part_Number" value="F31S-1A7L1-11040"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
@@ -157,7 +230,10 @@
       <value>TC2050-IDC-NL</value>
       <footprint>Connector:Tag-Connect_TC2050-IDC-NL_2x05_P1.27mm_Vertical</footprint>
       <fields>
+        <field name="Description">10P Tag Connect footprint (DNP)</field>
         <field name="MANUFACTURER">Tag-Connect</field>
+        <field name="Manufacturer_Name">-</field>
+        <field name="Manufacturer_Part_Number">-</field>
         <field name="PARTREV">A</field>
         <field name="STANDARD">Manufacturer recommendations</field>
       </fields>
@@ -166,6 +242,9 @@
       <property name="MANUFACTURER" value="Tag-Connect"/>
       <property name="MAXIMUM_PACKAGE_HEIGHT" value=""/>
       <property name="STANDARD" value="Manufacturer recommendations"/>
+      <property name="Description" value="10P Tag Connect footprint (DNP)"/>
+      <property name="Manufacturer_Name" value="-"/>
+      <property name="Manufacturer_Part_Number" value="-"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -175,7 +254,17 @@
       <value>MMBT3904</value>
       <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
       <datasheet>https://www.onsemi.com/pub/Collateral/2N3903-D.PDF</datasheet>
+      <fields>
+        <field name="Description">Bipolar NPN Transistor</field>
+        <field name="Manufacturer_Name">Diotec Semiconductor</field>
+        <field name="Manufacturer_Part_Number">MMBT3904</field>
+        <field name="Mouser Part Number">637-MMBT3904</field>
+      </fields>
       <libsource lib="Transistor_BJT" part="MMBT3904" description="0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"/>
+      <property name="Description" value="Bipolar NPN Transistor"/>
+      <property name="Manufacturer_Name" value="Diotec Semiconductor"/>
+      <property name="Manufacturer_Part_Number" value="MMBT3904"/>
+      <property name="Mouser Part Number" value="637-MMBT3904"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"/>
@@ -186,7 +275,17 @@
     <comp ref="R1">
       <value>68</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 68 (1/2W)</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-P06F68R0V</field>
+        <field name="Mouser Part Number">667-ERJ-P06F68R0V</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 68 (1/2W)"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-P06F68R0V"/>
+      <property name="Mouser Part Number" value="667-ERJ-P06F68R0V"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -197,7 +296,17 @@
     <comp ref="R2">
       <value>68</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 68 (1/2W)</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-P06F68R0V</field>
+        <field name="Mouser Part Number">667-ERJ-P06F68R0V</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 68 (1/2W)"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-P06F68R0V"/>
+      <property name="Mouser Part Number" value="667-ERJ-P06F68R0V"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -208,7 +317,17 @@
     <comp ref="R3">
       <value>68</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 68 (1/2W)</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-P06F68R0V</field>
+        <field name="Mouser Part Number">667-ERJ-P06F68R0V</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 68 (1/2W)"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-P06F68R0V"/>
+      <property name="Mouser Part Number" value="667-ERJ-P06F68R0V"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -219,7 +338,17 @@
     <comp ref="R6">
       <value>68</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 68 (1/2W)</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-P06F68R0V</field>
+        <field name="Mouser Part Number">667-ERJ-P06F68R0V</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 68 (1/2W)"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-P06F68R0V"/>
+      <property name="Mouser Part Number" value="667-ERJ-P06F68R0V"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -230,7 +359,17 @@
     <comp ref="R7">
       <value>68</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 68 (1/2W)</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-P06F68R0V</field>
+        <field name="Mouser Part Number">667-ERJ-P06F68R0V</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 68 (1/2W)"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-P06F68R0V"/>
+      <property name="Mouser Part Number" value="667-ERJ-P06F68R0V"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -241,7 +380,17 @@
     <comp ref="R8">
       <value>68</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 68 (1/2W)</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-P06F68R0V</field>
+        <field name="Mouser Part Number">667-ERJ-P06F68R0V</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 68 (1/2W)"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-P06F68R0V"/>
+      <property name="Mouser Part Number" value="667-ERJ-P06F68R0V"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -250,9 +399,19 @@
       <tstamps>a15e35fa-cadd-4be4-b223-d23c2f460adf</tstamps>
     </comp>
     <comp ref="R9">
-      <value>1k7</value>
+      <value>1k69</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 1.69k (1/4W)</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-PA3F1691V</field>
+        <field name="Mouser Part Number">667-ERJ-PA3F1691V</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 1.69k (1/4W)"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-PA3F1691V"/>
+      <property name="Mouser Part Number" value="667-ERJ-PA3F1691V"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -261,9 +420,19 @@
       <tstamps>41e0c390-bad3-452e-96d1-b1578c9ac4ac</tstamps>
     </comp>
     <comp ref="R10">
-      <value>1k7</value>
+      <value>1k69</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 1.69k (1/4W)</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-PA3F1691V</field>
+        <field name="Mouser Part Number">667-ERJ-PA3F1691V</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 1.69k (1/4W)"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-PA3F1691V"/>
+      <property name="Mouser Part Number" value="667-ERJ-PA3F1691V"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -274,7 +443,17 @@
     <comp ref="R11">
       <value>1k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 1k (1/4W)</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-PA3F1001V</field>
+        <field name="Mouser Part Number">667-ERJ-PA3F1001V</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 1k (1/4W)"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-PA3F1001V"/>
+      <property name="Mouser Part Number" value="667-ERJ-PA3F1001V"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -285,7 +464,17 @@
     <comp ref="R20">
       <value>68</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 68 (1/2W)</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-P06F68R0V</field>
+        <field name="Mouser Part Number">667-ERJ-P06F68R0V</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 68 (1/2W)"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-P06F68R0V"/>
+      <property name="Mouser Part Number" value="667-ERJ-P06F68R0V"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -297,7 +486,17 @@
       <value>MDBT50Q-P1MV2</value>
       <footprint>RF_Module:Raytac_MDBT50Q</footprint>
       <datasheet>https://www.raytac.com/download/index.php?index_id=43</datasheet>
+      <fields>
+        <field name="Description">Nordic nRF52840 SoC Solution </field>
+        <field name="Manufacturer_Name">Raytac Corporation</field>
+        <field name="Manufacturer_Part_Number">MDBT50Q-1MV2</field>
+        <field name="Mouser Part Number">485-4078</field>
+      </fields>
       <libsource lib="RF_Module" part="MDBT50Q-P1MV2" description="Multiprotocol BLE/ANT/2.4 GHz/802.15.4 Cortex-M4F SoC, nRF52840 module"/>
+      <property name="Description" value="Nordic nRF52840 SoC Solution "/>
+      <property name="Manufacturer_Name" value="Raytac Corporation"/>
+      <property name="Manufacturer_Part_Number" value="MDBT50Q-1MV2"/>
+      <property name="Mouser Part Number" value="485-4078"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Multiprotocol BLE/ANT/2.4 GHz/802.15.4 Cortex-M4F SoC, nRF52840 module"/>
@@ -308,7 +507,17 @@
     <comp ref="X1">
       <value>32.768kHz</value>
       <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
+      <fields>
+        <field name="Description">Crystal oscillator - 32.768 kHz</field>
+        <field name="Manufacturer_Name">NDK</field>
+        <field name="Manufacturer_Part_Number">NX3215SA-32.768K-STD-MUA-9</field>
+        <field name="Mouser Part Number">344-NX3215SA32768K9</field>
+      </fields>
       <libsource lib="Device" part="Crystal" description="Two pin crystal"/>
+      <property name="Description" value="Crystal oscillator - 32.768 kHz"/>
+      <property name="Manufacturer_Name" value="NDK"/>
+      <property name="Manufacturer_Part_Number" value="NX3215SA-32.768K-STD-MUA-9"/>
+      <property name="Mouser Part Number" value="344-NX3215SA32768K9"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="uBike.kicad_sch"/>
       <property name="ki_description" value="Two pin crystal"/>
@@ -319,7 +528,17 @@
     <comp ref="C1">
       <value>100n</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Description">100nF - Unpolarized capacitor, 25V, 10%</field>
+        <field name="Manufacturer_Name">AVX</field>
+        <field name="Manufacturer_Part_Number">08053C104KAT2A</field>
+        <field name="Mouser Part Number">581-08053C104K</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Description" value="100nF - Unpolarized capacitor, 25V, 10%"/>
+      <property name="Manufacturer_Name" value="AVX"/>
+      <property name="Manufacturer_Part_Number" value="08053C104KAT2A"/>
+      <property name="Mouser Part Number" value="581-08053C104K"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -328,20 +547,42 @@
       <tstamps>d4499452-b91d-4442-9938-3b0832de852d</tstamps>
     </comp>
     <comp ref="C2">
-      <value>10u</value>
-      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <value>120u</value>
+      <footprint>libs:16SVF180M</footprint>
+      <datasheet>http://industrial.panasonic.com/cdbs/www-data/pdf/AAB8000/AAB8000C177.pdf</datasheet>
+      <fields>
+        <field name="Height">6</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">20SVPF120M</field>
+        <field name="Mouser Part Number">667-20SVPF120M</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Panasonic/20SVPF120M?qs=OE1iw1LrrPFAGQZp2uLmXQ%3D%3D</field>
+      </fields>
+      <libsource lib="20SVPF120M" part="20SVPF120M" description="Panasonic 120uF 20 V Polymer Aluminium Electrolytic Capacitor C6, OS-CON Series 5000h 6.3 x 5.9mm"/>
+      <property name="Height" value="6"/>
+      <property name="Mouser Part Number" value="667-20SVPF120M"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Panasonic/20SVPF120M?qs=OE1iw1LrrPFAGQZp2uLmXQ%3D%3D"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="20SVPF120M"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor"/>
-      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_description" value="Panasonic 120uF 20 V Polymer Aluminium Electrolytic Capacitor C6, OS-CON Series 5000h 6.3 x 5.9mm"/>
       <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
-      <tstamps>3e5f19a9-7e58-4264-9833-05d7f6694e92</tstamps>
+      <tstamps>c2cc9341-5da3-417c-86dd-d2174dd7c876</tstamps>
     </comp>
     <comp ref="C3">
       <value>100n</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Description">100nF - Unpolarized capacitor, 25V, 10%</field>
+        <field name="Manufacturer_Name">AVX</field>
+        <field name="Manufacturer_Part_Number">08053C104KAT2A</field>
+        <field name="Mouser Part Number">581-08053C104K</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Description" value="100nF - Unpolarized capacitor, 25V, 10%"/>
+      <property name="Manufacturer_Name" value="AVX"/>
+      <property name="Manufacturer_Part_Number" value="08053C104KAT2A"/>
+      <property name="Mouser Part Number" value="581-08053C104K"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -350,20 +591,30 @@
       <tstamps>c2f654be-6be4-4d8e-8937-ed29921434cf</tstamps>
     </comp>
     <comp ref="C7">
-      <value>100n</value>
-      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <value>220u</value>
+      <footprint>libs:CHEMI-KE0</footprint>
+      <datasheet>EMVY630ARA221MKE0S</datasheet>
+      <libsource lib="2024-02-06_04-13-04" part="EMVY630ARA221MKE0S" description=""/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor"/>
-      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_keywords" value="EMVY630ARA221MKE0S"/>
       <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
-      <tstamps>26281421-0666-4b9c-a132-1e498de1419b</tstamps>
+      <tstamps>16899eb4-dab4-4ee0-b8c9-93df592696aa</tstamps>
     </comp>
     <comp ref="C8">
       <value>10u</value>
       <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <fields>
+        <field name="Description">10uF - Unpolarized capacitor, 25V, 10%</field>
+        <field name="Manufacturer_Name">Murata Electronics</field>
+        <field name="Manufacturer_Part_Number">GRM319R61E106MA12D</field>
+        <field name="Mouser Part Number">81-GRM319R61E106MA2D</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Description" value="10uF - Unpolarized capacitor, 25V, 10%"/>
+      <property name="Manufacturer_Name" value="Murata Electronics"/>
+      <property name="Manufacturer_Part_Number" value="GRM319R61E106MA12D"/>
+      <property name="Mouser Part Number" value="81-GRM319R61E106MA2D"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -372,20 +623,40 @@
       <tstamps>793fa098-5414-4846-85a7-8d3a98d78451</tstamps>
     </comp>
     <comp ref="C9">
-      <value>10n</value>
+      <value>100n</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Description">100nF - Unpolarized capacitor, 25V, 10%</field>
+        <field name="Manufacturer_Name">AVX</field>
+        <field name="Manufacturer_Part_Number">08053C104KAT2A</field>
+        <field name="Mouser Part Number">581-08053C104K</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Description" value="100nF - Unpolarized capacitor, 25V, 10%"/>
+      <property name="Manufacturer_Name" value="AVX"/>
+      <property name="Manufacturer_Part_Number" value="08053C104KAT2A"/>
+      <property name="Mouser Part Number" value="581-08053C104K"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
-      <tstamps>94236285-4af4-4b7e-be25-065f8f06b60e</tstamps>
+      <tstamps>3fdadc17-90a7-473e-a789-c8f5a8a378db</tstamps>
     </comp>
     <comp ref="C10">
-      <value>100n</value>
+      <value>1u</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Description">100nF - Unpolarized capacitor, 25V, 10%</field>
+        <field name="Manufacturer_Name">AVX</field>
+        <field name="Manufacturer_Part_Number">08053C104KAT2A</field>
+        <field name="Mouser Part Number">581-08053C104K</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Description" value="100nF - Unpolarized capacitor, 25V, 10%"/>
+      <property name="Manufacturer_Name" value="AVX"/>
+      <property name="Manufacturer_Part_Number" value="08053C104KAT2A"/>
+      <property name="Mouser Part Number" value="581-08053C104K"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -393,54 +664,11 @@
       <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
       <tstamps>bd7b01e0-d978-489b-9e90-23f8e29803b3</tstamps>
     </comp>
-    <comp ref="C11">
-      <value>22p</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Sheetname" value="External Connections"/>
-      <property name="Sheetfile" value="external-connections.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor"/>
-      <property name="ki_keywords" value="cap capacitor"/>
-      <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
-      <tstamps>c66a3e3d-b0ea-4ad3-91ab-fbf71c12963d</tstamps>
-    </comp>
-    <comp ref="C12">
-      <value>33u</value>
-      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Sheetname" value="External Connections"/>
-      <property name="Sheetfile" value="external-connections.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor"/>
-      <property name="ki_keywords" value="cap capacitor"/>
-      <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
-      <tstamps>851283f2-1cc0-43c7-ae18-e30314c91095</tstamps>
-    </comp>
-    <comp ref="C13">
-      <value>2u2</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Sheetname" value="External Connections"/>
-      <property name="Sheetfile" value="external-connections.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor"/>
-      <property name="ki_keywords" value="cap capacitor"/>
-      <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
-      <tstamps>220d5e46-04d1-4f85-a338-9bca8fd27472</tstamps>
-    </comp>
-    <comp ref="C14">
-      <value>2u2</value>
-      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Sheetname" value="External Connections"/>
-      <property name="Sheetfile" value="external-connections.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor"/>
-      <property name="ki_keywords" value="cap capacitor"/>
-      <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
-      <tstamps>7852228b-7e5f-4c4e-b83b-d611a93a25f9</tstamps>
-    </comp>
     <comp ref="D1">
       <value>CDSOT23-SM712</value>
       <footprint>libs:SOT95P230X117-3N</footprint>
       <fields>
+        <field name="Description">Surface Mount Bi-directional TVS Diode</field>
         <field name="Height">1.17</field>
         <field name="Manufacturer_Name">Bourns</field>
         <field name="Manufacturer_Part_Number">CDSOT23-SM712</field>
@@ -453,6 +681,7 @@
       <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Bourns/CDSOT23-SM712?qs=FuI%252BOVLl4%2FLTY%2FGQ265RLA%3D%3D"/>
       <property name="Manufacturer_Name" value="Bourns"/>
       <property name="Manufacturer_Part_Number" value="CDSOT23-SM712"/>
+      <property name="Description" value="Surface Mount Bi-directional TVS Diode"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
       <property name="ki_description" value="TVS Diode Dual Bi-Dir 7/12V 30KV SOT23 Bourns CDSOT23-SM712 Dual Bi-Directional TVS Diode, 400W peak, 3-Pin SOT-23"/>
@@ -462,7 +691,17 @@
     <comp ref="D3">
       <value>RED</value>
       <footprint>Diode_SMD:D_1206_3216Metric</footprint>
+      <fields>
+        <field name="Description">Light emitting diode (Red)</field>
+        <field name="Manufacturer_Name">Lite-On</field>
+        <field name="Manufacturer_Part_Number">LTST-C150KRKT</field>
+        <field name="Mouser Part Number">859-LTST-C150KRKT</field>
+      </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Description" value="Light emitting diode (Red)"/>
+      <property name="Manufacturer_Name" value="Lite-On"/>
+      <property name="Manufacturer_Part_Number" value="LTST-C150KRKT"/>
+      <property name="Mouser Part Number" value="859-LTST-C150KRKT"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
       <property name="ki_description" value="Light emitting diode"/>
@@ -474,6 +713,7 @@
       <value>CDSOT23-SM712</value>
       <footprint>libs:SOT95P230X117-3N</footprint>
       <fields>
+        <field name="Description">Surface Mount Bi-directional TVS Diode</field>
         <field name="Height">1.17</field>
         <field name="Manufacturer_Name">Bourns</field>
         <field name="Manufacturer_Part_Number">CDSOT23-SM712</field>
@@ -486,16 +726,41 @@
       <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Bourns/CDSOT23-SM712?qs=FuI%252BOVLl4%2FLTY%2FGQ265RLA%3D%3D"/>
       <property name="Manufacturer_Name" value="Bourns"/>
       <property name="Manufacturer_Part_Number" value="CDSOT23-SM712"/>
+      <property name="Description" value="Surface Mount Bi-directional TVS Diode"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
       <property name="ki_description" value="TVS Diode Dual Bi-Dir 7/12V 30KV SOT23 Bourns CDSOT23-SM712 Dual Bi-Directional TVS Diode, 400W peak, 3-Pin SOT-23"/>
       <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
       <tstamps>30f50493-73e1-44e6-a2b6-18de6b219807</tstamps>
     </comp>
+    <comp ref="D5">
+      <value>SS24FL</value>
+      <footprint>libs:SODFL3617X108N</footprint>
+      <datasheet>https://www.onsemi.com/pub/Collateral/SS26FL-D.PDF</datasheet>
+      <fields>
+        <field name="Height">1.08</field>
+        <field name="Manufacturer_Name">onsemi</field>
+        <field name="Manufacturer_Part_Number">SS24FL</field>
+        <field name="Mouser Part Number">512-SS24FL</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/SS24FL?qs=tqW9UTzndZyvT5hdH%252BfSxg%3D%3D</field>
+      </fields>
+      <libsource lib="SS24FL" part="SS24FL" description="ON SEMICONDUCTOR - SS24FL - SCHOTTKY RECT, AEC-Q101, 40V, SOD-123F"/>
+      <property name="Height" value="1.08"/>
+      <property name="Mouser Part Number" value="512-SS24FL"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/SS24FL?qs=tqW9UTzndZyvT5hdH%252BfSxg%3D%3D"/>
+      <property name="Manufacturer_Name" value="onsemi"/>
+      <property name="Manufacturer_Part_Number" value="SS24FL"/>
+      <property name="Sheetname" value="External Connections"/>
+      <property name="Sheetfile" value="external-connections.kicad_sch"/>
+      <property name="ki_description" value="ON SEMICONDUCTOR - SS24FL - SCHOTTKY RECT, AEC-Q101, 40V, SOD-123F"/>
+      <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
+      <tstamps>b978f06f-600c-4e85-8f1c-3b11d3d4946c</tstamps>
+    </comp>
     <comp ref="D6">
       <value>CDSOT23-SM712</value>
       <footprint>libs:SOT95P230X117-3N</footprint>
       <fields>
+        <field name="Description">Surface Mount Bi-directional TVS Diode</field>
         <field name="Height">1.17</field>
         <field name="Manufacturer_Name">Bourns</field>
         <field name="Manufacturer_Part_Number">CDSOT23-SM712</field>
@@ -508,6 +773,7 @@
       <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Bourns/CDSOT23-SM712?qs=FuI%252BOVLl4%2FLTY%2FGQ265RLA%3D%3D"/>
       <property name="Manufacturer_Name" value="Bourns"/>
       <property name="Manufacturer_Part_Number" value="CDSOT23-SM712"/>
+      <property name="Description" value="Surface Mount Bi-directional TVS Diode"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
       <property name="ki_description" value="TVS Diode Dual Bi-Dir 7/12V 30KV SOT23 Bourns CDSOT23-SM712 Dual Bi-Directional TVS Diode, 400W peak, 3-Pin SOT-23"/>
@@ -517,7 +783,17 @@
     <comp ref="F1">
       <value>2A</value>
       <footprint>Diode_SMD:D_1206_3216Metric</footprint>
+      <fields>
+        <field name="Description">2A Resettable Fuse</field>
+        <field name="Manufacturer_Name">Littelfuse, Inc</field>
+        <field name="Manufacturer_Part_Number">1206L200SLYR</field>
+        <field name="Mouser Part Number">576-1206L200SLYR</field>
+      </fields>
       <libsource lib="Device" part="Polyfuse_Small" description="Resettable fuse, polymeric positive temperature coefficient, small symbol"/>
+      <property name="Description" value="2A Resettable Fuse"/>
+      <property name="Manufacturer_Name" value="Littelfuse, Inc"/>
+      <property name="Manufacturer_Part_Number" value="1206L200SLYR"/>
+      <property name="Mouser Part Number" value="576-1206L200SLYR"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
       <property name="ki_description" value="Resettable fuse, polymeric positive temperature coefficient, small symbol"/>
@@ -530,19 +806,19 @@
       <footprint>libs:KMDGX6SBS</footprint>
       <datasheet>https://datasheet.datasheetarchive.com/originals/distributors/Datasheets_SAMA/6ef7dd0114fbe54ec5765e7dadc75a47.pdf</datasheet>
       <fields>
-        <field name="Description">Circular DIN Connectors 6P R/A FULL SHIELD GOLD PLANTED</field>
+        <field name="Description">6P mini-DIN connector female (socket)</field>
         <field name="Height">13</field>
-        <field name="Manufacturer_Name">Kycon</field>
+        <field name="Manufacturer_Name">Kycon, Inc.</field>
         <field name="Manufacturer_Part_Number">KMDGX-6S-BS</field>
         <field name="Mouser Part Number">806-KMDGX-6S-BS</field>
         <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Kycon/KMDGX-6S-BS?qs=gomZSfZNELc%252BcxHiGAVThw%3D%3D</field>
       </fields>
       <libsource lib="KMDGX-6S-BS" part="KMDGX-6S-BS" description="Circular DIN Connectors 6P R/A FULL SHIELD GOLD PLANTED"/>
-      <property name="Description" value="Circular DIN Connectors 6P R/A FULL SHIELD GOLD PLANTED"/>
+      <property name="Description" value="6P mini-DIN connector female (socket)"/>
       <property name="Height" value="13"/>
       <property name="Mouser Part Number" value="806-KMDGX-6S-BS"/>
       <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Kycon/KMDGX-6S-BS?qs=gomZSfZNELc%252BcxHiGAVThw%3D%3D"/>
-      <property name="Manufacturer_Name" value="Kycon"/>
+      <property name="Manufacturer_Name" value="Kycon, Inc."/>
       <property name="Manufacturer_Part_Number" value="KMDGX-6S-BS"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
@@ -555,19 +831,19 @@
       <footprint>libs:KMDGX8SBS</footprint>
       <datasheet>https://componentsearchengine.com/Datasheets/1/KMDGX-8S-BS.pdf</datasheet>
       <fields>
-        <field name="Description">Circular DIN Connectors 8P R/A FULL SHIELD GOLD PLATED</field>
+        <field name="Description">8P mini-DIN connector female (socket)</field>
         <field name="Height">13.3</field>
-        <field name="Manufacturer_Name">Kycon</field>
+        <field name="Manufacturer_Name">Kycon, Inc.</field>
         <field name="Manufacturer_Part_Number">KMDGX-8S-BS</field>
         <field name="Mouser Part Number">806-KMDGX-8S-BS</field>
         <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Kycon/KMDGX-8S-BS?qs=cuz0Kzc%2FkGBSI5WmI9vUiw%3D%3D</field>
       </fields>
       <libsource lib="KMDGX-8S-BS" part="KMDGX-8S-BS" description="Circular DIN Connectors 8P R/A FULL SHIELD GOLD PLATED"/>
-      <property name="Description" value="Circular DIN Connectors 8P R/A FULL SHIELD GOLD PLATED"/>
+      <property name="Description" value="8P mini-DIN connector female (socket)"/>
       <property name="Height" value="13.3"/>
       <property name="Mouser Part Number" value="806-KMDGX-8S-BS"/>
       <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Kycon/KMDGX-8S-BS?qs=cuz0Kzc%2FkGBSI5WmI9vUiw%3D%3D"/>
-      <property name="Manufacturer_Name" value="Kycon"/>
+      <property name="Manufacturer_Name" value="Kycon, Inc."/>
       <property name="Manufacturer_Part_Number" value="KMDGX-8S-BS"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
@@ -580,16 +856,19 @@
       <footprint>libs:87520-0010BLF</footprint>
       <datasheet>https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/87520.pdf</datasheet>
       <fields>
+        <field name="Description">USB Type A, Standard, Right Angle, Through Hole</field>
         <field name="Height">8</field>
-        <field name="Manufacturer_Name">Amphenol Communications Solutions</field>
+        <field name="Manufacturer_Name">Amphenol ICC</field>
         <field name="Manufacturer_Part_Number">87520-0010BLF</field>
+        <field name="Mouser Part Number">649-87520-0010BLF</field>
       </fields>
       <libsource lib="87520-0010BLF" part="87520-0010BLF" description="USB 2.0, Input Output Connector, USB Type A, Standard, Right Angle, Through Hole, Single Decks, 4 Positions"/>
       <property name="Height" value="8"/>
-      <property name="Mouser Part Number" value=""/>
+      <property name="Mouser Part Number" value="649-87520-0010BLF"/>
       <property name="Mouser Price/Stock" value=""/>
-      <property name="Manufacturer_Name" value="Amphenol Communications Solutions"/>
+      <property name="Manufacturer_Name" value="Amphenol ICC"/>
       <property name="Manufacturer_Part_Number" value="87520-0010BLF"/>
+      <property name="Description" value="USB Type A, Standard, Right Angle, Through Hole"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
       <property name="ki_description" value="USB 2.0, Input Output Connector, USB Type A, Standard, Right Angle, Through Hole, Single Decks, 4 Positions"/>
@@ -597,20 +876,42 @@
       <tstamps>a714345c-5efc-4659-909c-c7158daf63ed</tstamps>
     </comp>
     <comp ref="L1">
-      <value>120u</value>
-      <footprint>libs:L_Bourns_5050</footprint>
-      <libsource lib="Device" part="L_Ferrite" description="Inductor with ferrite core"/>
+      <value>MSS1210-683MED</value>
+      <footprint>libs:INDPM120120X1020N</footprint>
+      <datasheet>https://www.coilcraft.com/pdfs/MSS1210.pdf</datasheet>
+      <fields>
+        <field name="Height">10.2</field>
+        <field name="Manufacturer_Name">COILCRAFT</field>
+        <field name="Manufacturer_Part_Number">MSS1210-683MED</field>
+        <field name="Mouser Part Number">994-MSS1210-683MED</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Coilcraft/MSS1210-683MED?qs=zCSbvcPd3pbaONJwG86dvQ%3D%3D</field>
+      </fields>
+      <libsource lib="MSS1210-683MED" part="MSS1210-683MED" description="COILCRAFT - MSS1210-683MED - INDUCTOR, 68UH, 4.3A, 20%, PWR, 4.5MHZ"/>
+      <property name="Height" value="10.2"/>
+      <property name="Mouser Part Number" value="994-MSS1210-683MED"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Coilcraft/MSS1210-683MED?qs=zCSbvcPd3pbaONJwG86dvQ%3D%3D"/>
+      <property name="Manufacturer_Name" value="COILCRAFT"/>
+      <property name="Manufacturer_Part_Number" value="MSS1210-683MED"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
-      <property name="ki_description" value="Inductor with ferrite core"/>
-      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <property name="ki_description" value="COILCRAFT - MSS1210-683MED - INDUCTOR, 68UH, 4.3A, 20%, PWR, 4.5MHZ"/>
       <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
-      <tstamps>70a98214-8dd3-4cbc-ac0d-3767f07065e1</tstamps>
+      <tstamps>4787414d-8f5b-42b2-97a8-34bbf949f984</tstamps>
     </comp>
     <comp ref="R4">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 10k (1/4W)</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-PA3F1002V</field>
+        <field name="Mouser Part Number">667-ERJ-PA3F1002V</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 10k (1/4W)"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-PA3F1002V"/>
+      <property name="Mouser Part Number" value="667-ERJ-PA3F1002V"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -618,32 +919,18 @@
       <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
       <tstamps>b1a23249-05ca-4735-a1d8-891454533a5d</tstamps>
     </comp>
-    <comp ref="R5">
-      <value>61.9k</value>
-      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Sheetname" value="External Connections"/>
-      <property name="Sheetfile" value="external-connections.kicad_sch"/>
-      <property name="ki_description" value="Resistor"/>
-      <property name="ki_keywords" value="R res resistor"/>
-      <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
-      <tstamps>7f33885a-d9da-4d30-97ab-1a08b772cf1b</tstamps>
-    </comp>
-    <comp ref="R12">
-      <value>10k</value>
-      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Sheetname" value="External Connections"/>
-      <property name="Sheetfile" value="external-connections.kicad_sch"/>
-      <property name="ki_description" value="Resistor"/>
-      <property name="ki_keywords" value="R res resistor"/>
-      <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
-      <tstamps>99e9c796-fffb-4b59-bd3a-aa05e4f9431e</tstamps>
-    </comp>
     <comp ref="R13">
-      <value>120</value>
+      <value>250</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 120 (1/4W)</field>
+        <field name="Manufacturer_Name">-</field>
+        <field name="Manufacturer_Part_Number">-</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 120 (1/4W)"/>
+      <property name="Manufacturer_Name" value="-"/>
+      <property name="Manufacturer_Part_Number" value="-"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -654,7 +941,17 @@
     <comp ref="R14">
       <value>10</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 10 (1/4W)</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-PA3F10R0V</field>
+        <field name="Mouser Part Number">667-ERJ-PA3F10R0V</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 10 (1/4W)"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-PA3F10R0V"/>
+      <property name="Mouser Part Number" value="667-ERJ-PA3F10R0V"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -665,7 +962,17 @@
     <comp ref="R15">
       <value>10</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 10 (1/4W)</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-PA3F10R0V</field>
+        <field name="Mouser Part Number">667-ERJ-PA3F10R0V</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 10 (1/4W)"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-PA3F10R0V"/>
+      <property name="Mouser Part Number" value="667-ERJ-PA3F10R0V"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -673,32 +980,20 @@
       <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
       <tstamps>1d8c80c9-06d3-44ef-8c01-3a44e24bb210</tstamps>
     </comp>
-    <comp ref="R16">
-      <value>220k</value>
-      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Sheetname" value="External Connections"/>
-      <property name="Sheetfile" value="external-connections.kicad_sch"/>
-      <property name="ki_description" value="Resistor"/>
-      <property name="ki_keywords" value="R res resistor"/>
-      <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
-      <tstamps>d0ac3cac-1cd8-4389-b5ff-8ae2e3d3545e</tstamps>
-    </comp>
-    <comp ref="R17">
-      <value>30k</value>
-      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Sheetname" value="External Connections"/>
-      <property name="Sheetfile" value="external-connections.kicad_sch"/>
-      <property name="ki_description" value="Resistor"/>
-      <property name="ki_keywords" value="R res resistor"/>
-      <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
-      <tstamps>2587e139-aefb-43c8-8203-18c007ea708b</tstamps>
-    </comp>
     <comp ref="R18">
-      <value>150</value>
+      <value>330</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 150 (1/2W)</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-P06F1500V</field>
+        <field name="Mouser Part Number">667-ERJ-P06F1500V</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 150 (1/2W)"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-P06F1500V"/>
+      <property name="Mouser Part Number" value="667-ERJ-P06F1500V"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -707,9 +1002,19 @@
       <tstamps>0069cc5a-25ae-494c-90bd-2519960ff5d0</tstamps>
     </comp>
     <comp ref="R19">
-      <value>157</value>
+      <value>150</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 150 (1/4W)</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-PA3F1500V</field>
+        <field name="Mouser Part Number">667-ERJ-PA3F1500V</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 150 (1/4W)"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-PA3F1500V"/>
+      <property name="Mouser Part Number" value="667-ERJ-PA3F1500V"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -717,12 +1022,96 @@
       <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
       <tstamps>b798aef6-05cc-4bea-93bc-3102c49506fc</tstamps>
     </comp>
+    <comp ref="R21">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 10 (1/4W)</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-PA3F10R0V</field>
+        <field name="Mouser Part Number">667-ERJ-PA3F10R0V</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 10 (1/4W)"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-PA3F10R0V"/>
+      <property name="Mouser Part Number" value="667-ERJ-PA3F10R0V"/>
+      <property name="Sheetname" value="External Connections"/>
+      <property name="Sheetfile" value="external-connections.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
+      <tstamps>203ee8ea-ba52-49fd-9349-5bb506cfa025</tstamps>
+    </comp>
+    <comp ref="R22">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 10 (1/4W)</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-PA3F10R0V</field>
+        <field name="Mouser Part Number">667-ERJ-PA3F10R0V</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 10 (1/4W)"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-PA3F10R0V"/>
+      <property name="Mouser Part Number" value="667-ERJ-PA3F10R0V"/>
+      <property name="Sheetname" value="External Connections"/>
+      <property name="Sheetfile" value="external-connections.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
+      <tstamps>13ef0339-e0c2-4f79-82cc-c6880dc7acef</tstamps>
+    </comp>
+    <comp ref="R23">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 10 (1/4W)</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-PA3F10R0V</field>
+        <field name="Mouser Part Number">667-ERJ-PA3F10R0V</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 10 (1/4W)"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-PA3F10R0V"/>
+      <property name="Mouser Part Number" value="667-ERJ-PA3F10R0V"/>
+      <property name="Sheetname" value="External Connections"/>
+      <property name="Sheetfile" value="external-connections.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
+      <tstamps>a51c3551-3b79-4deb-8512-5154ad8dba33</tstamps>
+    </comp>
+    <comp ref="R24">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Description">Thick Film Resistor – 10 (1/4W)</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">ERJ-PA3F10R0V</field>
+        <field name="Mouser Part Number">667-ERJ-PA3F10R0V</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Description" value="Thick Film Resistor – 10 (1/4W)"/>
+      <property name="Manufacturer_Name" value="Panasonic"/>
+      <property name="Manufacturer_Part_Number" value="ERJ-PA3F10R0V"/>
+      <property name="Mouser Part Number" value="667-ERJ-PA3F10R0V"/>
+      <property name="Sheetname" value="External Connections"/>
+      <property name="Sheetfile" value="external-connections.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
+      <tstamps>ed8f066d-e172-4ef4-825d-407f3599a5e3</tstamps>
+    </comp>
     <comp ref="U1">
       <value>SN65HVD08DR</value>
       <footprint>libs:SOIC127P600X175-8N</footprint>
       <datasheet>https://www.ti.com/lit/ds/symlink/sn65hvd08.pdf?ts=1622791758515&amp;ref_url=https%253A%252F%252Fwww.ti.com%252Fstore%252Fti%252Fen%252Fp%252Fproduct%252F%253Fp%253DSN65HVD08DR</datasheet>
       <fields>
-        <field name="Description">TEXAS INSTRUMENTS - SN65HVD08DR - Transceiver, RS485, 1 Driver, 3 V to 5.5 V Supply, SOIC-8</field>
+        <field name="Description">Wide Supply Range RS-485 Transceiver</field>
         <field name="Height">1.75</field>
         <field name="Manufacturer_Name">Texas Instruments</field>
         <field name="Manufacturer_Part_Number">SN65HVD08DR</field>
@@ -730,7 +1119,7 @@
         <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN65HVD08DR?qs=QViXGNcIEAtwhwZ8YvgaIA%3D%3D</field>
       </fields>
       <libsource lib="SN65HVD08DR" part="SN65HVD08DR" description="TEXAS INSTRUMENTS - SN65HVD08DR - Transceiver, RS485, 1 Driver, 3 V to 5.5 V Supply, SOIC-8"/>
-      <property name="Description" value="TEXAS INSTRUMENTS - SN65HVD08DR - Transceiver, RS485, 1 Driver, 3 V to 5.5 V Supply, SOIC-8"/>
+      <property name="Description" value="Wide Supply Range RS-485 Transceiver"/>
       <property name="Height" value="1.75"/>
       <property name="Mouser Part Number" value="595-SN65HVD08DR"/>
       <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN65HVD08DR?qs=QViXGNcIEAtwhwZ8YvgaIA%3D%3D"/>
@@ -746,7 +1135,17 @@
       <value>LD1117S33TR_SOT223</value>
       <footprint>Package_TO_SOT_SMD:SOT-223-3_TabPin2</footprint>
       <datasheet>http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf</datasheet>
+      <fields>
+        <field name="Description">3.3v Fixed Low Drop Positive Voltage Regulator</field>
+        <field name="Manufacturer_Name">STMicroelectronics</field>
+        <field name="Manufacturer_Part_Number">LD1117S33TR</field>
+        <field name="Mouser Part Number">511-LD1117S33</field>
+      </fields>
       <libsource lib="Regulator_Linear" part="LD1117S33TR_SOT223" description="800mA Fixed Low Drop Positive Voltage Regulator, Fixed Output 3.3V, SOT-223"/>
+      <property name="Description" value="3.3v Fixed Low Drop Positive Voltage Regulator"/>
+      <property name="Manufacturer_Name" value="STMicroelectronics"/>
+      <property name="Manufacturer_Part_Number" value="LD1117S33TR"/>
+      <property name="Mouser Part Number" value="511-LD1117S33"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
       <property name="ki_description" value="800mA Fixed Low Drop Positive Voltage Regulator, Fixed Output 3.3V, SOT-223"/>
@@ -755,15 +1154,16 @@
       <tstamps>244047dc-c3f8-4c29-a639-2ebf27ea98aa</tstamps>
     </comp>
     <comp ref="U4">
-      <value>PTPSM863252RDXR</value>
-      <footprint>libs:TPSM863252RDX</footprint>
-      <datasheet>PTPSM863252RDXR</datasheet>
-      <libsource lib="TPSM863252RDX" part="PTPSM863252RDXR" description=""/>
+      <value>LM2596S-5</value>
+      <footprint>Package_TO_SOT_SMD:TO-263-5_TabPin3</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/lm2596.pdf</datasheet>
+      <libsource lib="Regulator_Switching" part="LM2596S-5" description="5V 3A Step-Down Voltage Regulator, TO-263"/>
       <property name="Sheetname" value="External Connections"/>
       <property name="Sheetfile" value="external-connections.kicad_sch"/>
-      <property name="ki_keywords" value="PTPSM863252RDXR"/>
+      <property name="ki_description" value="5V 3A Step-Down Voltage Regulator, TO-263"/>
+      <property name="ki_keywords" value="Step-Down Voltage Regulator 5V 3A"/>
       <sheetpath names="/External Connections/" tstamps="/e1032325-3e03-4636-92e2-c531782b9fc5/"/>
-      <tstamps>18129f71-cd28-4d17-aae1-23015d839db7</tstamps>
+      <tstamps>4d97a37f-81cb-465a-8b69-3fd661506f0b</tstamps>
     </comp>
   </components>
   <libparts>
@@ -783,6 +1183,43 @@
         <pin num="1" name="1" type="passive"/>
         <pin num="2" name="2" type="passive"/>
         <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="2024-02-06_04-13-04" part="EMVY630ARA221MKE0S">
+      <docs>EMVY630ARA221MKE0S</docs>
+      <footprints>
+        <fp>CHEMI-KE0</fp>
+        <fp>CHEMI-KE0-M</fp>
+        <fp>CHEMI-KE0-L</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">EMVY630ARA221MKE0S</field>
+        <field name="Footprint">CHEMI-KE0</field>
+        <field name="Datasheet">EMVY630ARA221MKE0S</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="unspecified"/>
+        <pin num="2" name="" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="20SVPF120M" part="20SVPF120M">
+      <description>Panasonic 120uF 20 V Polymer Aluminium Electrolytic Capacitor C6, OS-CON Series 5000h 6.3 x 5.9mm</description>
+      <docs>http://industrial.panasonic.com/cdbs/www-data/pdf/AAB8000/AAB8000C177.pdf</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">20SVPF120M</field>
+        <field name="Footprint">16SVF180M</field>
+        <field name="Datasheet">http://industrial.panasonic.com/cdbs/www-data/pdf/AAB8000/AAB8000C177.pdf</field>
+        <field name="Height">6</field>
+        <field name="Mouser Part Number">667-20SVPF120M</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Panasonic/20SVPF120M?qs=OE1iw1LrrPFAGQZp2uLmXQ%3D%3D</field>
+        <field name="Manufacturer_Name">Panasonic</field>
+        <field name="Manufacturer_Part_Number">20SVPF120M</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="87520-0010BLF" part="87520-0010BLF">
@@ -872,25 +1309,6 @@
       <pins>
         <pin num="1" name="K" type="passive"/>
         <pin num="2" name="A" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="L_Ferrite">
-      <description>Inductor with ferrite core</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>Choke_*</fp>
-        <fp>*Coil*</fp>
-        <fp>Inductor_*</fp>
-        <fp>L_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">L</field>
-        <field name="Value">L_Ferrite</field>
-        <field name="Datasheet">~</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Device" part="Polyfuse_Small">
@@ -1042,6 +1460,25 @@
         <pin num="MH3" name="MH3" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="MSS1210-683MED" part="MSS1210-683MED">
+      <description>COILCRAFT - MSS1210-683MED - INDUCTOR, 68UH, 4.3A, 20%, PWR, 4.5MHZ</description>
+      <docs>https://www.coilcraft.com/pdfs/MSS1210.pdf</docs>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">MSS1210-683MED</field>
+        <field name="Footprint">INDPM120120X1020N</field>
+        <field name="Datasheet">https://www.coilcraft.com/pdfs/MSS1210.pdf</field>
+        <field name="Height">10.2</field>
+        <field name="Mouser Part Number">994-MSS1210-683MED</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Coilcraft/MSS1210-683MED?qs=zCSbvcPd3pbaONJwG86dvQ%3D%3D</field>
+        <field name="Manufacturer_Name">COILCRAFT</field>
+        <field name="Manufacturer_Part_Number">MSS1210-683MED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Mechanical" part="MountingHole">
       <description>Mounting Hole without connection</description>
       <docs>~</docs>
@@ -1148,6 +1585,26 @@
         <pin num="3" name="VI" type="power_in"/>
       </pins>
     </libpart>
+    <libpart lib="Regulator_Switching" part="LM2596S-5">
+      <description>5V 3A Step-Down Voltage Regulator, TO-263</description>
+      <docs>http://www.ti.com/lit/ds/symlink/lm2596.pdf</docs>
+      <footprints>
+        <fp>TO?263*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM2596S-5</field>
+        <field name="Footprint">Package_TO_SOT_SMD:TO-263-5_TabPin3</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/lm2596.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN" type="power_in"/>
+        <pin num="2" name="OUT" type="output"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="FB" type="input"/>
+        <pin num="5" name="~{ON}/OFF" type="input"/>
+      </pins>
+    </libpart>
     <libpart lib="SN65HVD08DR" part="SN65HVD08DR">
       <description>TEXAS INSTRUMENTS - SN65HVD08DR - Transceiver, RS485, 1 Driver, 3 V to 5.5 V Supply, SOIC-8</description>
       <docs>https://www.ti.com/lit/ds/symlink/sn65hvd08.pdf?ts=1622791758515&amp;ref_url=https%253A%252F%252Fwww.ti.com%252Fstore%252Fti%252Fen%252Fp%252Fproduct%252F%253Fp%253DSN65HVD08DR</docs>
@@ -1174,6 +1631,25 @@
         <pin num="8" name="VCC" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="SS24FL" part="SS24FL">
+      <description>ON SEMICONDUCTOR - SS24FL - SCHOTTKY RECT, AEC-Q101, 40V, SOD-123F</description>
+      <docs>https://www.onsemi.com/pub/Collateral/SS26FL-D.PDF</docs>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">SS24FL</field>
+        <field name="Footprint">SODFL3617X108N</field>
+        <field name="Datasheet">https://www.onsemi.com/pub/Collateral/SS26FL-D.PDF</field>
+        <field name="Height">1.08</field>
+        <field name="Mouser Part Number">512-SS24FL</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/onsemi-Fairchild/SS24FL?qs=tqW9UTzndZyvT5hdH%252BfSxg%3D%3D</field>
+        <field name="Manufacturer_Name">onsemi</field>
+        <field name="Manufacturer_Part_Number">SS24FL</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="TC2050-IDC-NL" part="TC2050-IDC-NL">
       <fields>
         <field name="Reference">J</field>
@@ -1196,27 +1672,6 @@
         <pin num="10" name="10" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="TPSM863252RDX" part="PTPSM863252RDXR">
-      <docs>PTPSM863252RDXR</docs>
-      <footprints>
-        <fp>RDX0007A-MFG</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">PTPSM863252RDXR</field>
-        <field name="Footprint">RDX0007A-MFG</field>
-        <field name="Datasheet">PTPSM863252RDXR</field>
-      </fields>
-      <pins>
-        <pin num="1" name="VIN" type="power_in"/>
-        <pin num="2" name="SW" type="unspecified"/>
-        <pin num="3" name="VOUT" type="power_in"/>
-        <pin num="4" name="PGND" type="power_in"/>
-        <pin num="5" name="PG" type="open_collector"/>
-        <pin num="6" name="EN" type="input"/>
-        <pin num="7" name="FB" type="unspecified"/>
-      </pins>
-    </libpart>
     <libpart lib="Transistor_BJT" part="MMBT3904">
       <description>0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23</description>
       <docs>https://www.onsemi.com/pub/Collateral/2N3903-D.PDF</docs>
@@ -1237,6 +1692,12 @@
     </libpart>
   </libparts>
   <libraries>
+    <library logical="2024-02-06_04-13-04">
+      <uri>C:\Users\natha\Projects\uBike\hardware\board\kicad/libs/2024-02-06_04-13-04.kicad_sym</uri>
+    </library>
+    <library logical="20SVPF120M">
+      <uri>C:\Users\natha\Projects\uBike\hardware\board\kicad/libs/20SVPF120M.kicad_sym</uri>
+    </library>
     <library logical="87520-0010BLF">
       <uri>C:\Users\natha\Projects\uBike\hardware\board\kicad/libs/87520-0010BLF.kicad_sym</uri>
     </library>
@@ -1255,6 +1716,9 @@
     <library logical="KMDGX-8S-BS">
       <uri>C:\Users\natha\Projects\uBike\hardware\board\kicad/libs/KMDGX-8S-BS.lib</uri>
     </library>
+    <library logical="MSS1210-683MED">
+      <uri>C:\Users\natha\Projects\uBike\hardware\board\kicad/libs/MSS1210-683MED.kicad_sym</uri>
+    </library>
     <library logical="Mechanical">
       <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Mechanical.kicad_sym</uri>
     </library>
@@ -1264,14 +1728,17 @@
     <library logical="Regulator_Linear">
       <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Regulator_Linear.kicad_sym</uri>
     </library>
+    <library logical="Regulator_Switching">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Regulator_Switching.kicad_sym</uri>
+    </library>
     <library logical="SN65HVD08DR">
       <uri>C:\Users\natha\Projects\uBike\hardware\board\kicad/libs/SN65HVD08DR.lib</uri>
     </library>
+    <library logical="SS24FL">
+      <uri>C:\Users\natha\Projects\uBike\hardware\board\kicad/libs/SS24FL.kicad_sym</uri>
+    </library>
     <library logical="TC2050-IDC-NL">
       <uri>C:\Users\natha\Projects\uBike\hardware\board\kicad/libs/TC2050-IDC-NL.kicad_sym</uri>
-    </library>
-    <library logical="TPSM863252RDX">
-      <uri>C:\Users\natha\Projects\uBike\hardware\board\kicad/libs/TPSM863252RDX.kicad_sym</uri>
     </library>
     <library logical="Transistor_BJT">
       <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Transistor_BJT.kicad_sym</uri>
@@ -1283,6 +1750,7 @@
       <node ref="C10" pin="2" pintype="passive"/>
       <node ref="C4" pin="1" pintype="passive"/>
       <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
       <node ref="J2" pin="10" pinfunction="10" pintype="passive"/>
       <node ref="J2" pin="12" pinfunction="12" pintype="passive"/>
       <node ref="J2" pin="3" pinfunction="3" pintype="passive"/>
@@ -1296,31 +1764,22 @@
       <node ref="U3" pin="30" pinfunction="VDDH" pintype="power_in"/>
     </net>
     <net code="2" name="+5V">
-      <node ref="C11" pin="1" pintype="passive"/>
-      <node ref="C12" pin="1" pintype="passive"/>
       <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C7" pin="1" pintype="unspecified"/>
       <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="F1" pin="1" pintype="passive"/>
       <node ref="J2" pin="33" pinfunction="33" pintype="passive"/>
-      <node ref="R16" pin="2" pintype="passive"/>
+      <node ref="L1" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U2" pin="3" pinfunction="VI" pintype="power_in"/>
-      <node ref="U4" pin="3" pinfunction="VOUT" pintype="power_in"/>
+      <node ref="U4" pin="4" pinfunction="FB" pintype="input"/>
     </net>
     <net code="3" name="+12V">
-      <node ref="C14" pin="1" pintype="passive"/>
-      <node ref="C2" pin="1" pintype="passive"/>
-      <node ref="C7" pin="1" pintype="passive"/>
-      <node ref="L1" pin="2" pinfunction="2" pintype="passive"/>
-      <node ref="R5" pin="2" pintype="passive"/>
-      <node ref="U4" pin="1" pinfunction="VIN" pintype="power_in"/>
-    </net>
-    <net code="4" name="12_VIN">
-      <node ref="C13" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pinfunction="+" pintype="passive"/>
       <node ref="J3" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="J3" pin="7" pinfunction="7" pintype="passive"/>
-      <node ref="L1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U4" pin="1" pinfunction="VIN" pintype="power_in"/>
     </net>
-    <net code="5" name="BL_DRAIN">
+    <net code="4" name="BL_DRAIN">
       <node ref="Q1" pin="3" pinfunction="C" pintype="passive"/>
       <node ref="R1" pin="1" pintype="passive"/>
       <node ref="R2" pin="1" pintype="passive"/>
@@ -1329,45 +1788,43 @@
       <node ref="R7" pin="2" pintype="passive"/>
       <node ref="R8" pin="2" pintype="passive"/>
     </net>
-    <net code="6" name="BL_PWM">
+    <net code="5" name="BL_PWM">
       <node ref="R11" pin="1" pintype="passive"/>
       <node ref="U3" pin="41" pinfunction="P0.17" pintype="bidirectional"/>
     </net>
-    <net code="7" name="CS">
+    <net code="6" name="CS">
       <node ref="J2" pin="9" pinfunction="9" pintype="passive"/>
       <node ref="U3" pin="19" pinfunction="P0.26" pintype="bidirectional"/>
     </net>
-    <net code="8" name="CTP_SCL">
+    <net code="7" name="CTP_SCL">
       <node ref="J2" pin="6" pinfunction="6" pintype="passive"/>
       <node ref="R9" pin="2" pintype="passive"/>
       <node ref="U3" pin="24" pinfunction="P0.08" pintype="bidirectional"/>
     </net>
-    <net code="9" name="CTP_SDA">
+    <net code="8" name="CTP_SDA">
       <node ref="J2" pin="32" pinfunction="32" pintype="passive"/>
       <node ref="R10" pin="2" pintype="passive"/>
       <node ref="U3" pin="39" pinfunction="P0.15" pintype="bidirectional"/>
     </net>
-    <net code="10" name="DE">
+    <net code="9" name="DE">
       <node ref="U1" pin="2" pinfunction="~{RE}" pintype="passive"/>
       <node ref="U1" pin="3" pinfunction="DE" pintype="passive"/>
       <node ref="U3" pin="12" pinfunction="P0.31/AIN7" pintype="bidirectional"/>
     </net>
-    <net code="11" name="GND">
+    <net code="10" name="GND">
       <node ref="C1" pin="2" pintype="passive"/>
       <node ref="C10" pin="1" pintype="passive"/>
-      <node ref="C12" pin="2" pintype="passive"/>
-      <node ref="C13" pin="2" pintype="passive"/>
-      <node ref="C14" pin="2" pintype="passive"/>
-      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pinfunction="-" pintype="passive"/>
       <node ref="C3" pin="2" pintype="passive"/>
       <node ref="C4" pin="2" pintype="passive"/>
       <node ref="C5" pin="2" pintype="passive"/>
       <node ref="C6" pin="2" pintype="passive"/>
-      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="unspecified"/>
       <node ref="C8" pin="2" pintype="passive"/>
-      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
       <node ref="D1" pin="3" pinfunction="3" pintype="passive"/>
       <node ref="D4" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="D5" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="D6" pin="3" pinfunction="3" pintype="passive"/>
       <node ref="J1" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="J1" pin="6" pinfunction="6" pintype="passive"/>
@@ -1396,8 +1853,6 @@
       <node ref="J4" pin="5" pinfunction="5" pintype="passive"/>
       <node ref="J5" pin="4" pinfunction="4" pintype="passive"/>
       <node ref="Q1" pin="2" pinfunction="E" pintype="passive"/>
-      <node ref="R12" pin="1" pintype="passive"/>
-      <node ref="R17" pin="1" pintype="passive"/>
       <node ref="R18" pin="1" pintype="passive"/>
       <node ref="R20" pin="1" pintype="passive"/>
       <node ref="U1" pin="5" pinfunction="GND" pintype="passive"/>
@@ -1408,318 +1863,324 @@
       <node ref="U3" pin="32" pinfunction="VBUS" pintype="power_in"/>
       <node ref="U3" pin="33" pinfunction="GND" pintype="passive"/>
       <node ref="U3" pin="55" pinfunction="GND" pintype="passive"/>
-      <node ref="U4" pin="4" pinfunction="PGND" pintype="power_in"/>
+      <node ref="U4" pin="3" pinfunction="GND" pintype="power_in"/>
     </net>
-    <net code="12" name="IN1">
-      <node ref="D4" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="J1" pin="1" pinfunction="1" pintype="passive"/>
+    <net code="11" name="IN1">
+      <node ref="R21" pin="1" pintype="passive"/>
       <node ref="U3" pin="6" pinfunction="P1.13" pintype="bidirectional"/>
     </net>
-    <net code="13" name="IN2">
-      <node ref="D4" pin="2" pinfunction="2" pintype="passive"/>
-      <node ref="J1" pin="3" pinfunction="3" pintype="passive"/>
+    <net code="12" name="IN2">
+      <node ref="R22" pin="2" pintype="passive"/>
       <node ref="U3" pin="8" pinfunction="P1.15" pintype="bidirectional"/>
     </net>
-    <net code="14" name="IN3">
-      <node ref="D6" pin="2" pinfunction="2" pintype="passive"/>
-      <node ref="J1" pin="5" pinfunction="5" pintype="passive"/>
+    <net code="13" name="IN3">
+      <node ref="R24" pin="2" pintype="passive"/>
       <node ref="U3" pin="4" pinfunction="P1.11" pintype="bidirectional"/>
     </net>
-    <net code="15" name="IN4">
-      <node ref="D6" pin="1" pinfunction="1" pintype="passive"/>
-      <node ref="J1" pin="8" pinfunction="8" pintype="passive"/>
+    <net code="14" name="IN4">
+      <node ref="R23" pin="1" pintype="passive"/>
       <node ref="U3" pin="5" pinfunction="P1.12" pintype="bidirectional"/>
     </net>
-    <net code="16" name="Net-(D2-A)">
+    <net code="15" name="Net-(D2-A)">
       <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
       <node ref="U3" pin="44" pinfunction="P0.20" pintype="bidirectional"/>
     </net>
-    <net code="17" name="Net-(D2-K)">
+    <net code="16" name="Net-(D2-K)">
       <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R20" pin="2" pintype="passive"/>
     </net>
-    <net code="18" name="Net-(D3-K)">
+    <net code="17" name="Net-(D3-K)">
       <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="R18" pin="2" pintype="passive"/>
     </net>
-    <net code="19" name="Net-(F1-Pad2)">
+    <net code="18" name="Net-(D4-Pad1)">
+      <node ref="D4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="R21" pin="2" pintype="passive"/>
+    </net>
+    <net code="19" name="Net-(D4-Pad2)">
+      <node ref="D4" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="R22" pin="1" pintype="passive"/>
+    </net>
+    <net code="20" name="Net-(D5-K)">
+      <node ref="D5" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="L1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U4" pin="2" pinfunction="OUT" pintype="output"/>
+    </net>
+    <net code="21" name="Net-(D6-Pad1)">
+      <node ref="D6" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J1" pin="8" pinfunction="8" pintype="passive"/>
+      <node ref="R23" pin="2" pintype="passive"/>
+    </net>
+    <net code="22" name="Net-(D6-Pad2)">
+      <node ref="D6" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="J1" pin="5" pinfunction="5" pintype="passive"/>
+      <node ref="R24" pin="1" pintype="passive"/>
+    </net>
+    <net code="23" name="Net-(F1-Pad2)">
       <node ref="F1" pin="2" pintype="passive"/>
       <node ref="J5" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="20" name="Net-(J2-Pad34)">
+    <net code="24" name="Net-(J2-Pad34)">
       <node ref="J2" pin="34" pinfunction="34" pintype="passive"/>
       <node ref="R6" pin="1" pintype="passive"/>
     </net>
-    <net code="21" name="Net-(J2-Pad35)">
+    <net code="25" name="Net-(J2-Pad35)">
       <node ref="J2" pin="35" pinfunction="35" pintype="passive"/>
       <node ref="R1" pin="2" pintype="passive"/>
     </net>
-    <net code="22" name="Net-(J2-Pad36)">
+    <net code="26" name="Net-(J2-Pad36)">
       <node ref="J2" pin="36" pinfunction="36" pintype="passive"/>
       <node ref="R7" pin="1" pintype="passive"/>
     </net>
-    <net code="23" name="Net-(J2-Pad37)">
+    <net code="27" name="Net-(J2-Pad37)">
       <node ref="J2" pin="37" pinfunction="37" pintype="passive"/>
       <node ref="R2" pin="2" pintype="passive"/>
     </net>
-    <net code="24" name="Net-(J2-Pad38)">
+    <net code="28" name="Net-(J2-Pad38)">
       <node ref="J2" pin="38" pinfunction="38" pintype="passive"/>
       <node ref="R8" pin="1" pintype="passive"/>
     </net>
-    <net code="25" name="Net-(J2-Pad39)">
+    <net code="29" name="Net-(J2-Pad39)">
       <node ref="J2" pin="39" pinfunction="39" pintype="passive"/>
       <node ref="R3" pin="2" pintype="passive"/>
     </net>
-    <net code="26" name="Net-(J5-Pad2)">
+    <net code="30" name="Net-(J5-Pad2)">
       <node ref="J5" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R19" pin="1" pintype="passive"/>
     </net>
-    <net code="27" name="Net-(J5-Pad3)">
+    <net code="31" name="Net-(J5-Pad3)">
       <node ref="J5" pin="3" pinfunction="3" pintype="passive"/>
       <node ref="R19" pin="2" pintype="passive"/>
     </net>
-    <net code="28" name="Net-(Q1-B)">
+    <net code="32" name="Net-(Q1-B)">
       <node ref="Q1" pin="1" pinfunction="B" pintype="input"/>
       <node ref="R11" pin="2" pintype="passive"/>
     </net>
-    <net code="29" name="Net-(U1-A)">
+    <net code="33" name="Net-(U1-A)">
       <node ref="R13" pin="2" pintype="passive"/>
       <node ref="R14" pin="2" pintype="passive"/>
       <node ref="U1" pin="6" pinfunction="A" pintype="passive"/>
     </net>
-    <net code="30" name="Net-(U1-B)">
+    <net code="34" name="Net-(U1-B)">
       <node ref="R13" pin="1" pintype="passive"/>
       <node ref="R15" pin="2" pintype="passive"/>
       <node ref="U1" pin="7" pinfunction="B" pintype="passive"/>
     </net>
-    <net code="31" name="Net-(U3-XL1{slash}P0.00)">
+    <net code="35" name="Net-(U3-XL1{slash}P0.00)">
       <node ref="C5" pin="1" pintype="passive"/>
       <node ref="U3" pin="17" pinfunction="XL1/P0.00" pintype="bidirectional"/>
       <node ref="X1" pin="2" pinfunction="2" pintype="passive"/>
     </net>
-    <net code="32" name="Net-(U3-XL2{slash}P0.01)">
+    <net code="36" name="Net-(U3-XL2{slash}P0.01)">
       <node ref="C6" pin="1" pintype="passive"/>
       <node ref="U3" pin="18" pinfunction="XL2/P0.01" pintype="bidirectional"/>
       <node ref="X1" pin="1" pinfunction="1" pintype="passive"/>
     </net>
-    <net code="33" name="Net-(U4-EN)">
-      <node ref="C9" pin="1" pintype="passive"/>
-      <node ref="R12" pin="2" pintype="passive"/>
-      <node ref="R5" pin="1" pintype="passive"/>
-      <node ref="U4" pin="6" pinfunction="EN" pintype="input"/>
-    </net>
-    <net code="34" name="Net-(U4-FB)">
-      <node ref="C11" pin="2" pintype="passive"/>
-      <node ref="R16" pin="1" pintype="passive"/>
-      <node ref="R17" pin="2" pintype="passive"/>
-      <node ref="U4" pin="7" pinfunction="FB" pintype="unspecified"/>
-    </net>
-    <net code="35" name="RESET">
+    <net code="37" name="RESET">
       <node ref="J2" pin="7" pinfunction="7" pintype="passive"/>
       <node ref="U3" pin="16" pinfunction="P0.27" pintype="bidirectional"/>
     </net>
-    <net code="36" name="RS">
+    <net code="38" name="RS">
       <node ref="J2" pin="8" pinfunction="8" pintype="passive"/>
       <node ref="U3" pin="37" pinfunction="P0.13" pintype="bidirectional"/>
     </net>
-    <net code="37" name="RS485_A">
+    <net code="39" name="RS485_A">
       <node ref="D1" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="J3" pin="4" pinfunction="4" pintype="passive"/>
       <node ref="R14" pin="1" pintype="passive"/>
     </net>
-    <net code="38" name="RS485_B">
+    <net code="40" name="RS485_B">
       <node ref="D1" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="J3" pin="3" pinfunction="3" pintype="passive"/>
       <node ref="R15" pin="1" pintype="passive"/>
     </net>
-    <net code="39" name="RX">
+    <net code="41" name="RX">
       <node ref="R4" pin="2" pintype="passive"/>
       <node ref="U1" pin="1" pinfunction="R" pintype="passive"/>
       <node ref="U3" pin="14" pinfunction="P0.30/AIN6" pintype="bidirectional"/>
     </net>
-    <net code="40" name="SCL">
+    <net code="42" name="SCL">
       <node ref="J2" pin="11" pinfunction="11" pintype="passive"/>
       <node ref="U3" pin="23" pinfunction="TRACECLK/P0.07" pintype="bidirectional"/>
     </net>
-    <net code="41" name="SDI">
+    <net code="43" name="SDI">
       <node ref="J2" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U3" pin="22" pinfunction="P0.06" pintype="bidirectional"/>
     </net>
-    <net code="42" name="SDO">
+    <net code="44" name="SDO">
       <node ref="J2" pin="13" pinfunction="13" pintype="passive"/>
       <node ref="U3" pin="27" pinfunction="TRACEDATA2/P0.11" pintype="bidirectional"/>
     </net>
-    <net code="43" name="SWCLK">
+    <net code="45" name="SWCLK">
       <node ref="J4" pin="4" pinfunction="4" pintype="passive"/>
       <node ref="U3" pin="53" pinfunction="SWDCLK" pintype="input"/>
     </net>
-    <net code="44" name="SWDIO">
+    <net code="46" name="SWDIO">
       <node ref="J4" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U3" pin="51" pinfunction="SWDIO" pintype="bidirectional"/>
     </net>
-    <net code="45" name="SWD_RST">
+    <net code="47" name="SWD_RST">
       <node ref="J4" pin="10" pinfunction="10" pintype="passive"/>
       <node ref="U3" pin="40" pinfunction="~{RESET}/P0.18" pintype="bidirectional"/>
     </net>
-    <net code="46" name="SWO">
+    <net code="48" name="SWO">
       <node ref="J4" pin="6" pinfunction="6" pintype="passive"/>
       <node ref="U3" pin="47" pinfunction="TRACEDATA0/P1.00" pintype="bidirectional"/>
     </net>
-    <net code="47" name="TX">
+    <net code="49" name="TX">
       <node ref="U1" pin="4" pinfunction="D" pintype="passive"/>
       <node ref="U3" pin="10" pinfunction="P0.29/AIN5" pintype="bidirectional"/>
     </net>
-    <net code="48" name="YD">
+    <net code="50" name="YD">
       <node ref="J2" pin="5" pinfunction="5" pintype="passive"/>
       <node ref="U3" pin="13" pinfunction="P0.28/AIN4" pintype="bidirectional"/>
     </net>
-    <net code="49" name="YU">
+    <net code="51" name="YU">
       <node ref="J2" pin="31" pinfunction="31" pintype="passive"/>
       <node ref="U3" pin="36" pinfunction="P0.14" pintype="bidirectional"/>
     </net>
-    <net code="50" name="unconnected-(J1-PadMH1)">
+    <net code="52" name="unconnected-(J1-PadMH1)">
       <node ref="J1" pin="MH1" pinfunction="MH1" pintype="passive+no_connect"/>
     </net>
-    <net code="51" name="unconnected-(J1-PadMH2)">
+    <net code="53" name="unconnected-(J1-PadMH2)">
       <node ref="J1" pin="MH2" pinfunction="MH2" pintype="passive+no_connect"/>
     </net>
-    <net code="52" name="unconnected-(J1-PadMH3)">
+    <net code="54" name="unconnected-(J1-PadMH3)">
       <node ref="J1" pin="MH3" pinfunction="MH3" pintype="passive+no_connect"/>
     </net>
-    <net code="53" name="unconnected-(J2-Pad4)">
+    <net code="55" name="unconnected-(J2-Pad4)">
       <node ref="J2" pin="4" pinfunction="4" pintype="passive+no_connect"/>
     </net>
-    <net code="54" name="unconnected-(J2-PadMP1)">
+    <net code="56" name="unconnected-(J2-PadMP1)">
       <node ref="J2" pin="MP1" pinfunction="MP1" pintype="passive+no_connect"/>
     </net>
-    <net code="55" name="unconnected-(J2-PadMP2)">
+    <net code="57" name="unconnected-(J2-PadMP2)">
       <node ref="J2" pin="MP2" pinfunction="MP2" pintype="passive+no_connect"/>
     </net>
-    <net code="56" name="unconnected-(J2-PadMP3)">
+    <net code="58" name="unconnected-(J2-PadMP3)">
       <node ref="J2" pin="MP3" pinfunction="MP3" pintype="passive+no_connect"/>
     </net>
-    <net code="57" name="unconnected-(J2-PadMP4)">
+    <net code="59" name="unconnected-(J2-PadMP4)">
       <node ref="J2" pin="MP4" pinfunction="MP4" pintype="passive+no_connect"/>
     </net>
-    <net code="58" name="unconnected-(J3-Pad5)">
+    <net code="60" name="unconnected-(J3-Pad5)">
       <node ref="J3" pin="5" pinfunction="5" pintype="passive+no_connect"/>
     </net>
-    <net code="59" name="unconnected-(J3-Pad8)">
+    <net code="61" name="unconnected-(J3-Pad8)">
       <node ref="J3" pin="8" pinfunction="8" pintype="passive+no_connect"/>
     </net>
-    <net code="60" name="unconnected-(J3-PadMH1)">
+    <net code="62" name="unconnected-(J3-PadMH1)">
       <node ref="J3" pin="MH1" pinfunction="MH1" pintype="passive+no_connect"/>
     </net>
-    <net code="61" name="unconnected-(J3-PadMH2)">
+    <net code="63" name="unconnected-(J3-PadMH2)">
       <node ref="J3" pin="MH2" pinfunction="MH2" pintype="passive+no_connect"/>
     </net>
-    <net code="62" name="unconnected-(J3-PadMH3)">
+    <net code="64" name="unconnected-(J3-PadMH3)">
       <node ref="J3" pin="MH3" pinfunction="MH3" pintype="passive+no_connect"/>
     </net>
-    <net code="63" name="unconnected-(J4-Pad7)">
+    <net code="65" name="unconnected-(J4-Pad7)">
       <node ref="J4" pin="7" pinfunction="7" pintype="passive+no_connect"/>
     </net>
-    <net code="64" name="unconnected-(J4-Pad8)">
+    <net code="66" name="unconnected-(J4-Pad8)">
       <node ref="J4" pin="8" pinfunction="8" pintype="passive+no_connect"/>
     </net>
-    <net code="65" name="unconnected-(J4-Pad9)">
+    <net code="67" name="unconnected-(J4-Pad9)">
       <node ref="J4" pin="9" pinfunction="9" pintype="passive+no_connect"/>
     </net>
-    <net code="66" name="unconnected-(J5-PadMH1)">
+    <net code="68" name="unconnected-(J5-PadMH1)">
       <node ref="J5" pin="MH1" pinfunction="MH1" pintype="passive+no_connect"/>
     </net>
-    <net code="67" name="unconnected-(J5-PadMH2)">
+    <net code="69" name="unconnected-(J5-PadMH2)">
       <node ref="J5" pin="MH2" pinfunction="MH2" pintype="passive+no_connect"/>
     </net>
-    <net code="68" name="unconnected-(U3-D+-Pad35)">
+    <net code="70" name="unconnected-(U3-D+-Pad35)">
       <node ref="U3" pin="35" pinfunction="D+" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="69" name="unconnected-(U3-D--Pad34)">
+    <net code="71" name="unconnected-(U3-D--Pad34)">
       <node ref="U3" pin="34" pinfunction="D-" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="70" name="unconnected-(U3-DCCH-Pad31)">
+    <net code="72" name="unconnected-(U3-DCCH-Pad31)">
       <node ref="U3" pin="31" pinfunction="DCCH" pintype="power_out+no_connect"/>
     </net>
-    <net code="71" name="unconnected-(U3-P0.02{slash}AIN0-Pad11)">
+    <net code="73" name="unconnected-(U3-P0.02{slash}AIN0-Pad11)">
       <node ref="U3" pin="11" pinfunction="P0.02/AIN0" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="72" name="unconnected-(U3-P0.03{slash}AIN1-Pad9)">
+    <net code="74" name="unconnected-(U3-P0.03{slash}AIN1-Pad9)">
       <node ref="U3" pin="9" pinfunction="P0.03/AIN1" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="73" name="unconnected-(U3-P0.04{slash}AIN2-Pad20)">
+    <net code="75" name="unconnected-(U3-P0.04{slash}AIN2-Pad20)">
       <node ref="U3" pin="20" pinfunction="P0.04/AIN2" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="74" name="unconnected-(U3-P0.05{slash}AIN3-Pad21)">
+    <net code="76" name="unconnected-(U3-P0.05{slash}AIN3-Pad21)">
       <node ref="U3" pin="21" pinfunction="P0.05/AIN3" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="75" name="unconnected-(U3-P0.09{slash}NFC1-Pad52)">
+    <net code="77" name="unconnected-(U3-P0.09{slash}NFC1-Pad52)">
       <node ref="U3" pin="52" pinfunction="P0.09/NFC1" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="76" name="unconnected-(U3-P0.10{slash}NFC2-Pad54)">
+    <net code="78" name="unconnected-(U3-P0.10{slash}NFC2-Pad54)">
       <node ref="U3" pin="54" pinfunction="P0.10/NFC2" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="77" name="unconnected-(U3-P0.16-Pad38)">
+    <net code="79" name="unconnected-(U3-P0.16-Pad38)">
       <node ref="U3" pin="38" pinfunction="P0.16" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="78" name="unconnected-(U3-P0.19-Pad42)">
+    <net code="80" name="unconnected-(U3-P0.19-Pad42)">
       <node ref="U3" pin="42" pinfunction="P0.19" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="79" name="unconnected-(U3-P0.21-Pad43)">
+    <net code="81" name="unconnected-(U3-P0.21-Pad43)">
       <node ref="U3" pin="43" pinfunction="P0.21" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="80" name="unconnected-(U3-P0.22-Pad46)">
+    <net code="82" name="unconnected-(U3-P0.22-Pad46)">
       <node ref="U3" pin="46" pinfunction="P0.22" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="81" name="unconnected-(U3-P0.23-Pad45)">
+    <net code="83" name="unconnected-(U3-P0.23-Pad45)">
       <node ref="U3" pin="45" pinfunction="P0.23" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="82" name="unconnected-(U3-P0.24-Pad48)">
+    <net code="84" name="unconnected-(U3-P0.24-Pad48)">
       <node ref="U3" pin="48" pinfunction="P0.24" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="83" name="unconnected-(U3-P0.25-Pad49)">
+    <net code="85" name="unconnected-(U3-P0.25-Pad49)">
       <node ref="U3" pin="49" pinfunction="P0.25" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="84" name="unconnected-(U3-P1.01-Pad61)">
+    <net code="86" name="unconnected-(U3-P1.01-Pad61)">
       <node ref="U3" pin="61" pinfunction="P1.01" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="85" name="unconnected-(U3-P1.02-Pad50)">
+    <net code="87" name="unconnected-(U3-P1.02-Pad50)">
       <node ref="U3" pin="50" pinfunction="P1.02" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="86" name="unconnected-(U3-P1.03-Pad60)">
+    <net code="88" name="unconnected-(U3-P1.03-Pad60)">
       <node ref="U3" pin="60" pinfunction="P1.03" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="87" name="unconnected-(U3-P1.04-Pad56)">
+    <net code="89" name="unconnected-(U3-P1.04-Pad56)">
       <node ref="U3" pin="56" pinfunction="P1.04" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="88" name="unconnected-(U3-P1.05-Pad59)">
+    <net code="90" name="unconnected-(U3-P1.05-Pad59)">
       <node ref="U3" pin="59" pinfunction="P1.05" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="89" name="unconnected-(U3-P1.06-Pad57)">
+    <net code="91" name="unconnected-(U3-P1.06-Pad57)">
       <node ref="U3" pin="57" pinfunction="P1.06" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="90" name="unconnected-(U3-P1.07-Pad58)">
+    <net code="92" name="unconnected-(U3-P1.07-Pad58)">
       <node ref="U3" pin="58" pinfunction="P1.07" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="91" name="unconnected-(U3-P1.08-Pad25)">
+    <net code="93" name="unconnected-(U3-P1.08-Pad25)">
       <node ref="U3" pin="25" pinfunction="P1.08" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="92" name="unconnected-(U3-P1.10-Pad3)">
+    <net code="94" name="unconnected-(U3-P1.10-Pad3)">
       <node ref="U3" pin="3" pinfunction="P1.10" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="93" name="unconnected-(U3-P1.14-Pad7)">
+    <net code="95" name="unconnected-(U3-P1.14-Pad7)">
       <node ref="U3" pin="7" pinfunction="P1.14" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="94" name="unconnected-(U3-TRACEDATA1{slash}P0.12-Pad29)">
+    <net code="96" name="unconnected-(U3-TRACEDATA1{slash}P0.12-Pad29)">
       <node ref="U3" pin="29" pinfunction="TRACEDATA1/P0.12" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="95" name="unconnected-(U3-TRACEDATA3{slash}P1.09-Pad26)">
+    <net code="97" name="unconnected-(U3-TRACEDATA3{slash}P1.09-Pad26)">
       <node ref="U3" pin="26" pinfunction="TRACEDATA3/P1.09" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="96" name="unconnected-(U4-PG-Pad5)">
-      <node ref="U4" pin="5" pinfunction="PG" pintype="open_collector+no_connect"/>
-    </net>
-    <net code="97" name="unconnected-(U4-SW-Pad2)">
-      <node ref="U4" pin="2" pinfunction="SW" pintype="unspecified+no_connect"/>
+    <net code="98" name="unconnected-(U4-~{ON}{slash}OFF-Pad5)">
+      <node ref="U4" pin="5" pinfunction="~{ON}/OFF" pintype="input+no_connect"/>
     </net>
   </nets>
 </export>
