@@ -38,6 +38,8 @@
 #define PRIORITY 15
 
 #define SHA_CHAR_LEN 7
+#define MAX_VERSION_LEN 64
+
 
 LOG_MODULE_REGISTER ( display );
 
@@ -55,7 +57,7 @@ static lv_obj_t *rpm_desc_label;
 static lv_obj_t *pwr_desc_label;
 static lv_obj_t *inc_desc_label;
 static lv_obj_t *res_desc_label;
-static lv_obj_t *sha_label;
+static lv_obj_t *version_label;
 static lv_obj_t *swLabel;
 static lv_obj_t *btnLabel;
 static lv_obj_t *btn;
@@ -69,7 +71,7 @@ static char pwrString [5];                 // 9999
 static char incString [7];                 // -10.0%
 static char resString [3];                 // 99
 static char swString [9];                  // 00:00:00
-static char shaString [SHA_CHAR_LEN + 1];  // 1234567
+static char versionString [MAX_VERSION_LEN];
 
 void updateBacklight ( bool wakeUp )
 {
@@ -251,11 +253,18 @@ static void drawSlider()
     lv_obj_set_width ( slider, 300 );
 }*/
 
-void getShaChar ( char *buff, size_t len )
+void getGitVersionChar(char *buff)
 {
-    strncpy ( buff, GIT_COMMIT_HASH, len );
-    buff [len + 1] = '\0';
-};
+    // Use git tag if not empty
+    if (GIT_TAG[0] != '\0') {
+        strncpy(buff, GIT_TAG, MAX_VERSION_LEN  - 1);
+        buff[MAX_VERSION_LEN  - 1] = '\0';
+    // Otherwise fall back on SHA
+    } else {
+        strncpy(buff, GIT_COMMIT_HASH, SHA_CHAR_LEN);
+        buff[SHA_CHAR_LEN] = '\0';
+    }
+}
 
 static void drawLines()
 {
@@ -285,7 +294,7 @@ static void drawLabels()
     pwr_desc_label = lv_label_create ( lv_scr_act() );
     inc_desc_label = lv_label_create ( lv_scr_act() );
     res_desc_label = lv_label_create ( lv_scr_act() );
-    sha_label = lv_label_create ( lv_scr_act() );
+    version_label = lv_label_create ( lv_scr_act() );
 
     lv_style_init ( &descStyle );
     lv_style_set_text_font ( &descStyle, &lv_font_montserrat_24 );
@@ -300,15 +309,15 @@ static void drawLabels()
 
     lv_style_init ( &shaStyle );
     lv_style_set_text_font ( &shaStyle, &lv_font_montserrat_24 );
-    lv_obj_align ( sha_label, LV_ALIGN_TOP_MID, 110, 0 );
-    lv_obj_add_style ( sha_label, &shaStyle, 0 );
+    lv_obj_align ( version_label, LV_ALIGN_TOP_MID, 110, 0 );
+    lv_obj_add_style ( version_label, &shaStyle, 0 );
 
     lv_label_set_text ( rpm_desc_label, "Rpm" );
     lv_label_set_text ( pwr_desc_label, "Watts" );
     lv_label_set_text ( inc_desc_label, "Incline" );
     lv_label_set_text ( res_desc_label, "Resistance" );
-    getShaChar ( shaString, SHA_CHAR_LEN );
-    lv_label_set_text ( sha_label, shaString );
+    getGitVersionChar ( versionString );
+    lv_label_set_text ( version_label, versionString );
 
     rpm_label = lv_label_create ( lv_scr_act() );
     pwr_label = lv_label_create ( lv_scr_act() );
@@ -349,7 +358,7 @@ int initDisplay()
     if ( pwm_set_dt ( &blPwm, PWM_PERIOD, PWM_PERIOD ) ) {
         LOG_ERR ( "Failed to set backlight period!" );
         return -3;
-    };
+    }
 
     updateBacklight ( true );
 

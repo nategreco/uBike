@@ -28,8 +28,24 @@ execute_process(
     OUTPUT_VARIABLE GIT_COMMIT_HASH
     OUTPUT_STRIP_TRAILING_WHITESPACE)
 
-add_compile_definitions( GIT_COMMIT_HASH="${GIT_COMMIT_HASH}" 
-    GIT_BRANCH="${GIT_BRANCH}" )
+# Get the latest tag associated with the current commit, if any
+execute_process(
+    COMMAND bash -c "git describe --tags --exact-match 2>/dev/null || echo ''"
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+    RESULT_VARIABLE GIT_DESCRIBE_RESULT
+    OUTPUT_VARIABLE GIT_TAG
+    OUTPUT_STRIP_TRAILING_WHITESPACE)
+
+# Debugging output for the definitions
+message(STATUS "GIT_COMMIT_HASH: ${GIT_COMMIT_HASH}")
+message(STATUS "GIT_BRANCH: ${GIT_BRANCH}")
+message(STATUS "GIT_TAG: ${GIT_TAG}")
+
+# Add the definitions for the commit hash, branch, and tag
+add_compile_definitions(
+    GIT_COMMIT_HASH="${GIT_COMMIT_HASH}" 
+    GIT_BRANCH="${GIT_BRANCH}" 
+    GIT_TAG="${GIT_TAG}")
 
 cmake_minimum_required(VERSION 3.20.0)
 list(APPEND BOARD_ROOT ${CMAKE_CURRENT_SOURCE_DIR})
